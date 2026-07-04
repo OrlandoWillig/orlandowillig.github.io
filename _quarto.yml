@@ -41,5 +41,6 @@ format:
       body-width: 1000px
     include-in-header:
       - assets/head.html
+      - assets/tracking.html
     mainfont: "Inter, system-ui, sans-serif"
     monofont: "JetBrains Mono, monospace"
