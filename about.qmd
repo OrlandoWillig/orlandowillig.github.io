@@ -18,7 +18,7 @@ Ich bin Junior Prüfungsexperte und Data Analyst bei der **Eidgenössischen Fina
 
 :::: reveal-on-scroll
 ::: tags
-[IT-Audit]{.tag} [Performance-Audit]{.tag} [Datenanalyse]{.tag} [R]{.tag} [SQL]{.tag} [Process Mining]{.tag} [KI-Governance]{.tag}
+[Performance-Audit]{.tag} [Datenanalyse]{.tag} [R]{.tag} [SQL]{.tag} [Process Mining]{.tag} [KI-Governance]{.tag}
 :::
 ::::
 
