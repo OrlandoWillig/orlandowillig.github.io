@@ -1,0 +1,16 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+/.quarto/
+/_site/
+/docs/.quarto/
+
+**/*.quarto_ipynb
+
+website-agent-prompt.md
+
+renv/
+renv.lock
+006_Persoenliche_Webseite.Rproj
+.gitignoredocs/_site/

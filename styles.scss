@@ -1,0 +1,242 @@
+/*-- scss:defaults --*/
+
+// Fonts
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-family-monospace: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+
+// Farbschema: Schwarz/Anthrazit + Matrix-Grün
+$matrix-green: #00FF41;
+$matrix-green-dim: #0a8f2e;
+$anthracite: #12151a;
+$anthracite-2: #171b22;
+$ink: #0a0c10;
+
+$body-bg: $ink;
+$body-color: #c9d1d9;
+$link-color: $matrix-green;
+$navbar-bg: rgba(10, 12, 16, 0.85);
+$code-color: $matrix-green;
+$border-color: #232a33;
+
+/*-- scss:rules --*/
+
+body {
+  line-height: 1.65;
+  letter-spacing: 0.1px;
+}
+
+// Monospace-Akzente für Headlines
+h1, h2, h3, .navbar-brand, .hero-name {
+  font-family: $font-family-monospace;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 0.3rem;
+  margin-top: 2.5rem;
+}
+
+// Navbar: dezent, blur
+.navbar {
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $border-color;
+}
+
+.navbar .nav-link {
+  font-family: $font-family-monospace;
+  font-size: 0.9rem;
+}
+
+.navbar .nav-link:hover {
+  color: $matrix-green !important;
+}
+
+a:hover {
+  color: lighten($matrix-green, 10%);
+}
+
+// ---------- Hero ----------
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.hero-name {
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 18px rgba(0, 255, 65, 0.25);
+}
+
+.hero-claim {
+  font-family: $font-family-monospace;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: $matrix-green;
+  margin-bottom: 1.4rem;
+}
+
+.hero-claim::before {
+  content: "> ";
+  opacity: 0.6;
+}
+
+.hero-teaser {
+  max-width: 620px;
+  font-size: 1.1rem;
+  color: #b6c0cc;
+  margin-bottom: 2rem;
+}
+
+// CTA-Buttons
+.cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.cta {
+  font-family: $font-family-monospace;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid $matrix-green-dim;
+  border-radius: 4px;
+  color: $matrix-green;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: rgba(0, 255, 65, 0.04);
+}
+
+.cta:hover {
+  background: rgba(0, 255, 65, 0.14);
+  border-color: $matrix-green;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+// ---------- Karten ----------
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.info-card {
+  background: $anthracite;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 1.4rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.info-card:hover {
+  border-color: $matrix-green-dim;
+  transform: translateY(-3px);
+}
+
+.info-card h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.info-card .meta {
+  font-family: $font-family-monospace;
+  font-size: 0.8rem;
+  color: $matrix-green;
+  margin-bottom: 0.6rem;
+}
+
+// Tech-Stack Tags
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+
+.tag {
+  font-family: $font-family-monospace;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 3px;
+  background: rgba(0, 255, 65, 0.08);
+  color: $matrix-green;
+  border: 1px solid rgba(0, 255, 65, 0.18);
+}
+
+// ---------- Kontakt-Icons ----------
+.contact-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: $font-family-monospace;
+  font-size: 0.9rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  color: #b6c0cc;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-icon svg {
+  color: $matrix-green;
+  transition: filter 0.2s ease;
+}
+
+.contact-icon:hover {
+  border-color: $matrix-green-dim;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.contact-icon:hover svg {
+  filter: drop-shadow(0 0 6px rgba(0, 255, 65, 0.6));
+}
+
+// ---------- Scroll-Animationen ----------
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  #matrix-canvas { display: none; }
+}

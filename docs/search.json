@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "publikationen.html",
+    "href": "publikationen.html",
+    "title": "Publikationen & Artikel",
+    "section": "",
+    "text": "&lt;div class=\"meta\"&gt;ExpertFocus · April 2026&lt;/div&gt;\n&lt;h3&gt;Agentic AI und CAATs&lt;/h3&gt;\n&lt;p&gt;Artikel gemeinsam mit Marco Schreyer über den Einsatz agentischer KI in\ncomputergestützten Prüfungstechniken (CAATs).&lt;/p&gt;\n&lt;div class=\"tags\"&gt;\n  &lt;span class=\"tag\"&gt;Agentic AI&lt;/span&gt;\n  &lt;span class=\"tag\"&gt;CAATs&lt;/span&gt;\n  &lt;span class=\"tag\"&gt;Audit&lt;/span&gt;\n&lt;/div&gt;\n&lt;!-- &lt;p&gt;&lt;a href=\"#\"&gt;Zum Artikel →&lt;/a&gt;&lt;/p&gt; --&gt;\n\n\n&lt;div class=\"meta\"&gt;INTOSAI Journal · Q3 2026&lt;/div&gt;\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nDie Links zu den Artikeln ergänze ich, sobald sie verfügbar sind."
+  },
+  {
+    "objectID": "masterarbeit.html",
+    "href": "masterarbeit.html",
+    "title": "Masterarbeit",
+    "section": "",
+    "text": "Note\n\n\n\nDiese Sektion ist ein Platzhalter. Titel, Abstract, Methodik und Kernresultate folgen, sobald die Details vorliegen."
+  },
+  {
+    "objectID": "masterarbeit.html#titel",
+    "href": "masterarbeit.html#titel",
+    "title": "Masterarbeit",
+    "section": "Titel",
+    "text": "Titel\n\n[Platzhalter — Titel der Masterarbeit]"
+  },
+  {
+    "objectID": "masterarbeit.html#abstract",
+    "href": "masterarbeit.html#abstract",
+    "title": "Masterarbeit",
+    "section": "Abstract",
+    "text": "Abstract\n\n[Platzhalter — kurzer Abstract: Fragestellung, Kontext und wichtigste Erkenntnis in wenigen Sätzen.]"
+  },
+  {
+    "objectID": "masterarbeit.html#methodik",
+    "href": "masterarbeit.html#methodik",
+    "title": "Masterarbeit",
+    "section": "Methodik",
+    "text": "Methodik\n\n[Platzhalter — verwendete Daten, Methoden und Vorgehen.]"
+  },
+  {
+    "objectID": "masterarbeit.html#kernresultate",
+    "href": "masterarbeit.html#kernresultate",
+    "title": "Masterarbeit",
+    "section": "Kernresultate",
+    "text": "Kernresultate\n\n[Platzhalter — zentrale Ergebnisse und deren Bedeutung.]"
+  },
+  {
+    "objectID": "index.html#schwerpunkte",
+    "href": "index.html#schwerpunkte",
+    "title": "Orlando Willig",
+    "section": "Schwerpunkte",
+    "text": "Schwerpunkte\nMeine Arbeit bewegt sich an der Schnittstelle von Prüfung, Daten und künstlicher Intelligenz. Ich achte auf saubere Methodik, nachvollziehbare Resultate und Werkzeuge, die im Prüfalltag tatsächlich Bestand haben."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Über mich",
+    "section": "",
+    "text": "Ich bin Junior Prüfungsexperte und Data Analyst bei der Eidgenössischen Finanzkontrolle (EFK) in Bern. Mein Weg dorthin führte über die Politik­wissenschaft und mein Interesse für Daten — eine Kombination, die mir hilft, technische Systeme und ihre gesellschaftliche Wirkung zusammen zu denken."
+  },
+  {
+    "objectID": "about.html#werdegang",
+    "href": "about.html#werdegang",
+    "title": "Über mich",
+    "section": "Werdegang",
+    "text": "Werdegang\n\n\nPolitikwissenschaft — Verständnis für Institutionen, öffentliche Aufgaben und Governance\nInformatik / Machine Learning — technische Tiefe in Daten, Modellen und Systemen\nEidgenössische Finanzkontrolle (EFK), Bern — Junior Prüfungsexperte & Data Analyst"
+  },
+  {
+    "objectID": "about.html#schwerpunkte",
+    "href": "about.html#schwerpunkte",
+    "title": "Über mich",
+    "section": "Schwerpunkte",
+    "text": "Schwerpunkte\n\n\nIT-Audit Performance-Audit Datenanalyse R SQL Process Mining KI-Governance\n\n\n\nIch interessiere mich besonders dafür, wie sich KI im Prüfungswesen sinnvoll und kontrolliert einsetzen lässt — dort, wo sie die Arbeit von Prüferinnen und Prüfern stärkt, ohne Nachvollziehbarkeit und Verantwortung aufzugeben."
+  },
+  {
+    "objectID": "kontakt.html",
+    "href": "kontakt.html",
+    "title": "Kontakt",
+    "section": "",
+    "text": "Ich freue mich über Nachrichten zu Audit, Datenanalyse und KI-Governance.\n\n\n\n  \n    \n      \n      \n    \n    E-Mail\n  \n\n  \n    \n      \n      \n      \n    \n    LinkedIn\n  \n\n  \n    \n      \n      \n    \n    GitHub"
+  },
+  {
+    "objectID": "projekte.html",
+    "href": "projekte.html",
+    "title": "Projekte",
+    "section": "",
+    "text": "&lt;h3&gt;tbd\n&lt;/div&gt;\n\n\n&lt;h3&gt;tbd\n&lt;/div&gt;\n\n\n&lt;h3&gt;tbd\n&lt;/div&gt;\n\n\n&lt;h3&gt;GSERM-Projekt: Machine Learning mit R&lt;/h3&gt;\n&lt;p&gt;Vorhersage der Wahlbeteiligung mit LASSO, Random Forest und neuronalem\nNetz — inklusive Vergleich der Modellgüte.&lt;/p&gt;\n&lt;div class=\"tags\"&gt;\n  &lt;span class=\"tag\"&gt;R&lt;/span&gt;\n  &lt;span class=\"tag\"&gt;LASSO&lt;/span&gt;\n  &lt;span class=\"tag\"&gt;Random Forest&lt;/span&gt;\n  &lt;span class=\"tag\"&gt;Neural Network&lt;/span&gt;\n&lt;/div&gt;"
+  },
+  {
+    "objectID": "projekte.html#feature-importance-gserm-projekt",
+    "href": "projekte.html#feature-importance-gserm-projekt",
+    "title": "Projekte",
+    "section": "Feature Importance (GSERM-Projekt)",
+    "text": "Feature Importance (GSERM-Projekt)\n\nKleine interaktive Vorschau auf ein Resultat aus dem GSERM-Projekt. Die Werte sind derzeit Platzhalter und werden durch die echten Feature-Importance-Werte ersetzt.\n\ndata = [\n  { feature: \"Alter\", importance: 0.28 },\n  { feature: \"Bildung\", importance: 0.22 },\n  { feature: \"Einkommen\", importance: 0.17 },\n  { feature: \"Region\", importance: 0.13 },\n  { feature: \"Vorwahlbeteiligung\", importance: 0.12 },\n  { feature: \"Parteibindung\", importance: 0.08 }\n]\n\nPlot.plot({\n  marginLeft: 130,\n  x: { label: \"Wichtigkeit\", grid: true },\n  y: { label: null },\n  color: { scheme: \"greens\" },\n  marks: [\n    Plot.barX(data, {\n      x: \"importance\",\n      y: \"feature\",\n      fill: \"importance\",\n      sort: { y: \"x\", reverse: true }\n    }),\n    Plot.ruleX([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nGitHub-Links und die echten Projektdaten ergänze ich, sobald sie vorliegen."
+  }
+]

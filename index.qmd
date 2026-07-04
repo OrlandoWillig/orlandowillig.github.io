@@ -1,0 +1,61 @@
+---
+pagetitle: "Orlando Willig — Audit trifft KI"
+page-layout: full
+include-after-body:
+  text: |
+    <script src="assets/matrix.js"></script>
+---
+
+```{=html}
+<canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+<section class="hero">
+  <div class="hero-name">Orlando Willig</div>
+  <div class="hero-claim">Junior Prüfungsexperte &amp; Data Analyst — Audit trifft KI</div>
+  <p class="hero-teaser">
+    Ich verbinde Performance-Audit mit Datenanalyse und angewandter KI.
+    Bei der Eidgenössischen Finanzkontrolle prüfe ich, wo Technik, Governance und
+    öffentliche Aufgabe aufeinandertreffen.
+  </p>
+  <nav class="cta-links">
+    <a class="cta" href="about.html">Über mich</a>
+    <a class="cta" href="masterarbeit.html">Masterarbeit</a>
+    <a class="cta" href="publikationen.html">Publikationen</a>
+    <a class="cta" href="projekte.html">Projekte</a>
+    <a class="cta" href="kontakt.html">Kontakt</a>
+  </nav>
+</section>
+```
+
+::: reveal-on-scroll
+## Schwerpunkte
+
+Meine Arbeit bewegt sich an der Schnittstelle von Prüfung, Daten und künstlicher Intelligenz. Ich achte auf saubere Methodik, nachvollziehbare Resultate und Werkzeuge, die im Prüfalltag tatsächlich Bestand haben.
+:::
+
+::::::: reveal-on-scroll
+:::::: card-grid
+::: info-card
+```         
+<h3>IT- &amp; Performance-Audit</h3>
+<p>Prüfung von Systemen, Prozessen und Wirksamkeit — mit Blick auf Risiken
+und Wirtschaftlichkeit.</p>
+```
+:::
+
+::: info-card
+```         
+<h3>Datenanalyse</h3>
+<p>R, SQL und Process Mining, um Prüfungsfragen empirisch zu beantworten.</p>
+```
+:::
+
+::: info-card
+```         
+<h3>KI-Governance</h3>
+<p>Verantwortungsvoller Einsatz von KI — von der Methodik bis zum
+Kontrollrahmen.</p>
+```
+:::
+::::::
+:::::::

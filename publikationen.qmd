@@ -1,0 +1,32 @@
+---
+title: "Publikationen & Artikel"
+---
+
+:::::: reveal-on-scroll
+::::: card-grid
+::: info-card
+```         
+<div class="meta">ExpertFocus · April 2026</div>
+<h3>Agentic AI und CAATs</h3>
+<p>Artikel gemeinsam mit Marco Schreyer über den Einsatz agentischer KI in
+computergestützten Prüfungstechniken (CAATs).</p>
+<div class="tags">
+  <span class="tag">Agentic AI</span>
+  <span class="tag">CAATs</span>
+  <span class="tag">Audit</span>
+</div>
+<!-- <p><a href="#">Zum Artikel →</a></p> -->
+```
+:::
+
+::: info-card
+```         
+<div class="meta">INTOSAI Journal · Q3 2026</div>
+```
+:::
+:::::
+::::::
+
+::: callout-note
+Die Links zu den Artikeln ergänze ich, sobald sie verfügbar sind.
+:::

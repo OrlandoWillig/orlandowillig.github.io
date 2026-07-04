@@ -1,0 +1,27 @@
+---
+title: "Über mich"
+---
+
+::: reveal-on-scroll
+Ich bin Junior Prüfungsexperte und Data Analyst bei der **Eidgenössischen Finanzkontrolle (EFK)** in Bern. Mein Weg dorthin führte über die Politik­wissenschaft und mein Interesse für Daten — eine Kombination, die mir hilft, technische Systeme und ihre gesellschaftliche Wirkung zusammen zu denken.
+:::
+
+## Werdegang
+
+::: reveal-on-scroll
+- **Politikwissenschaft** — Verständnis für Institutionen, öffentliche Aufgaben und Governance
+- **Informatik / Machine Learning** — technische Tiefe in Daten, Modellen und Systemen
+- **Eidgenössische Finanzkontrolle (EFK), Bern** — Junior Prüfungsexperte & Data Analyst
+:::
+
+## Schwerpunkte
+
+:::: reveal-on-scroll
+::: tags
+[IT-Audit]{.tag} [Performance-Audit]{.tag} [Datenanalyse]{.tag} [R]{.tag} [SQL]{.tag} [Process Mining]{.tag} [KI-Governance]{.tag}
+:::
+::::
+
+::: reveal-on-scroll
+Ich interessiere mich besonders dafür, wie sich KI im Prüfungswesen sinnvoll und kontrolliert einsetzen lässt — dort, wo sie die Arbeit von Prüferinnen und Prüfern stärkt, ohne Nachvollziehbarkeit und Verantwortung aufzugeben.
+:::

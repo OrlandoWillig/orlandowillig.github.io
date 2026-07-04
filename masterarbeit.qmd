@@ -1,0 +1,37 @@
+---
+title: "Masterarbeit"
+---
+
+::: {.callout-note}
+Diese Sektion ist ein Platzhalter. Titel, Abstract, Methodik und Kernresultate
+folgen, sobald die Details vorliegen.
+:::
+
+## Titel
+
+::: {.reveal-on-scroll}
+*[Platzhalter — Titel der Masterarbeit]*
+:::
+
+## Abstract
+
+::: {.reveal-on-scroll}
+*[Platzhalter — kurzer Abstract: Fragestellung, Kontext und wichtigste
+Erkenntnis in wenigen Sätzen.]*
+:::
+
+## Methodik
+
+::: {.reveal-on-scroll}
+*[Platzhalter — verwendete Daten, Methoden und Vorgehen.]*
+:::
+
+## Kernresultate
+
+::: {.reveal-on-scroll}
+*[Platzhalter — zentrale Ergebnisse und deren Bedeutung.]*
+:::
+
+<!-- Optionaler PDF-Download, sobald verfügbar:
+[Masterarbeit als PDF herunterladen](assets/masterarbeit.pdf){.cta}
+-->

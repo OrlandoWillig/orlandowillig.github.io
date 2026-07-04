@@ -1,0 +1,12 @@
+{
+  "permission": {
+    "edit": {
+      "*.scss": "allow",
+      "*.html": "allow",
+      "*.js": "allow",
+      "*.svg": "allow",
+      "*.qmd": "allow",
+      "*.yml": "allow"
+    }
+  }
+}
