@@ -2,9 +2,21 @@
 title: "Über mich"
 ---
 
-::: reveal-on-scroll
-Ich bin Junior Prüfungsexperte und Data Analyst bei der **Eidgenössischen Finanzkontrolle (EFK)** in Bern. Mein Weg dorthin führte über die Politik­wissenschaft und mein Interesse für Daten — eine Kombination, die mir hilft, technische Systeme und ihre gesellschaftliche Wirkung zusammen zu denken.
-:::
+```{=html}
+<div class="about-hero reveal-on-scroll">
+  <img src="assets/42.png"
+       alt="Portrait Orlando Willig"
+       class="portrait"
+       width="300" height="300">
+  <div class="about-intro">
+    <p>Ich bin Junior Prüfungsexperte und Data Analyst bei der
+    <a href="https://efk.admin.ch"><strong>Eidgenössischen Finanzkontrolle (EFK)</strong></a>
+    in Bern. Mein Weg dorthin führte über die Politikwissenschaft und mein Interesse für
+    Daten — eine Kombination, die mir hilft, technische Systeme und ihre gesellschaftliche
+    Wirkung zusammen zu denken.</p>
+  </div>
+</div>
+```
 
 ## Werdegang
 

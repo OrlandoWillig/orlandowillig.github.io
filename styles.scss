@@ -183,6 +183,65 @@ a:hover {
   border: 1px solid rgba(0, 255, 65, 0.18);
 }
 
+// ---------- Über mich: Portrait ----------
+.about-hero {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.portrait {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  object-position: center 10%;
+  border-radius: 12px;
+  border: 1px solid $border-color;
+  flex-shrink: 0;
+}
+
+.about-intro {
+  flex: 1;
+  font-size: 1.05rem;
+  color: #b6c0cc;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  .portrait {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+// ---------- Publikationen: Klickbare Karte ----------
+a.info-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.info-card-link h3 {
+  color: #fff;
+}
+
+a.info-card-link:hover {
+  color: inherit;
+}
+
+.card-cta {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-family: $font-family-monospace;
+  font-size: 0.85rem;
+  color: $matrix-green;
+}
+
 // ---------- Kontakt-Icons ----------
 .contact-links {
   display: flex;

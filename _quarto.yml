@@ -8,7 +8,7 @@ project:
 
 website:
   title: "Orlando Willig"
-  description: "Junior Prüfungsexperte & Data Analyst — Audit trifft KI"
+  description: "Orlando Willig – Junior Prüfungsexperte und Data Analyst bei der Eidgenössischen Finanzkontrolle (EFK), Schweiz. Schwerpunkte: Performance Audit, Data Analytics, KI-Governance."
   site-url: "https://orlandowillig.github.io"
   favicon: assets/favicon.svg
   open-graph: true
