@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d14a38d981e09e9262c02958e18fbf88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-433cf56388dd5308684eab6c01c91ae2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-383874d1056d2bfd98227ba6d5105124.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -204,7 +204,14 @@ ul.task-list li input[type="checkbox"] {
   <p class="card-cta">Zum Artikel →</p>
 </a>
 <div class="info-card">
-<pre><code>&lt;div class="meta"&gt;INTOSAI Journal · Q3 2026&lt;/div&gt;</code></pre>
+  <div class="meta">INTOSAI Journal · Q3 2026</div>
+  <h3 class="anchored">Agentic AI und Performance Auditing</h3>
+  <p>Artikel darüber, wie agentische KI-Ansätze das Performance Auditing
+  unterstützen können.</p>
+  <div class="tags">
+    <span class="tag">Agentic AI</span>
+    <span class="tag">Performance Audit</span>
+  </div>
 </div>
 </div>
 </div>
@@ -212,6 +219,72 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
+<!-- Google-Translate-Umschalter (DE <-> EN) -->
+<script>
+(function () {
+  // Google-Translate-Widget (versteckt) initialisieren
+  window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement(
+      { pageLanguage: "de", includedLanguages: "en,de", autoDisplay: false },
+      "google_translate_element"
+    );
+  };
+
+  function loadWidget() {
+    if (document.getElementById("google_translate_element")) return;
+    var div = document.createElement("div");
+    div.id = "google_translate_element";
+    div.style.display = "none";
+    document.body.appendChild(div);
+
+    var s = document.createElement("script");
+    s.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    document.body.appendChild(s);
+  }
+
+  // Ziel-Sprache im versteckten Google-Select setzen
+  function setLang(lang) {
+    var combo = document.querySelector(".goog-te-combo");
+    if (!combo) return false;
+    combo.value = lang;
+    combo.dispatchEvent(new Event("change"));
+    return true;
+  }
+
+  function addButton() {
+    var container =
+      document.querySelector("#navbarCollapse") ||
+      document.querySelector(".navbar-container") ||
+      document.querySelector(".navbar");
+    if (!container) return;
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "lang-toggle";
+    btn.textContent = "EN";
+    btn.setAttribute("aria-label", "Translate page to English");
+
+    var translated = false;
+    btn.addEventListener("click", function () {
+      var target = translated ? "de" : "en";
+      var tries = 0;
+      (function attempt() {
+        if (setLang(target)) {
+          translated = !translated;
+          btn.textContent = translated ? "DE" : "EN";
+        } else if (tries++ < 25) {
+          setTimeout(attempt, 150);
+        }
+      })();
+    });
+
+    container.appendChild(btn);
+  }
+
+  loadWidget();
+  addButton();
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

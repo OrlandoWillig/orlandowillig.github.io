@@ -42,5 +42,7 @@ format:
     include-in-header:
       - assets/head.html
       - assets/tracking.html
+    include-after-body:
+      - assets/translate.html
     mainfont: "Inter, system-ui, sans-serif"
     monofont: "JetBrains Mono, monospace"

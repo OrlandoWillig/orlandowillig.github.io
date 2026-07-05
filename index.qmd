@@ -35,27 +35,23 @@ Meine Arbeit bewegt sich an der Schnittstelle von Prüfung, Daten und künstlich
 
 ::::::: reveal-on-scroll
 :::::: card-grid
-::: info-card
-```         
-<h3>IT- &amp; Performance-Audit</h3>
-<p>Prüfung von Systemen, Prozessen und Wirksamkeit — mit Blick auf Risiken
-und Wirtschaftlichkeit.</p>
-```
-:::
+```{=html}
+<div class="info-card">
+  <h3>IT- &amp; Performance-Audit</h3>
+  <p>Prüfung von Systemen, Prozessen und Wirksamkeit — mit Blick auf Risiken
+  und Wirtschaftlichkeit.</p>
+</div>
 
-::: info-card
-```         
-<h3>Datenanalyse</h3>
-<p>R, SQL und Process Mining, um Prüfungsfragen empirisch zu beantworten.</p>
-```
-:::
+<div class="info-card">
+  <h3>Datenanalyse</h3>
+  <p>R, SQL und Process Mining, um Prüfungsfragen empirisch zu beantworten.</p>
+</div>
 
-::: info-card
-```         
-<h3>KI-Governance</h3>
-<p>Verantwortungsvoller Einsatz von KI — von der Methodik bis zum
-Kontrollrahmen.</p>
+<div class="info-card">
+  <h3>KI-Governance</h3>
+  <p>Verantwortungsvoller Einsatz von KI — von der Methodik bis zum
+  Kontrollrahmen.</p>
+</div>
 ```
-:::
 ::::::
 :::::::

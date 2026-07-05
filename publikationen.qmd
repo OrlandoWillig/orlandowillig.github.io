@@ -21,10 +21,17 @@ title: "Publikationen & Artikel"
 </a>
 ```
 
-::: info-card
-```         
-<div class="meta">INTOSAI Journal · Q3 2026</div>
+```{=html}
+<div class="info-card">
+  <div class="meta">INTOSAI Journal · Q3 2026</div>
+  <h3>Agentic AI und Performance Auditing</h3>
+  <p>Artikel darüber, wie agentische KI-Ansätze das Performance Auditing
+  unterstützen können.</p>
+  <div class="tags">
+    <span class="tag">Agentic AI</span>
+    <span class="tag">Performance Audit</span>
+  </div>
+</div>
 ```
-:::
 :::::
 ::::::

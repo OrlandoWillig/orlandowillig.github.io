@@ -4,40 +4,31 @@ title: "Projekte"
 
 :::::::: reveal-on-scroll
 ::::::: card-grid
-::: info-card
-```         
-<h3>tbd
+```{=html}
+<div class="info-card">
+  <h3>tbd</h3>
 </div>
-```
-:::
 
-::: info-card
-```         
-<h3>tbd
+<div class="info-card">
+  <h3>tbd</h3>
 </div>
-```
-:::
 
-::: info-card
-```         
-<h3>tbd
+<div class="info-card">
+  <h3>tbd</h3>
 </div>
-```
-:::
 
-::: info-card
-```         
-<h3>GSERM-Projekt: Machine Learning mit R</h3>
-<p>Vorhersage der Wahlbeteiligung mit LASSO, Random Forest und neuronalem
-Netz — inklusive Vergleich der Modellgüte.</p>
-<div class="tags">
-  <span class="tag">R</span>
-  <span class="tag">LASSO</span>
-  <span class="tag">Random Forest</span>
-  <span class="tag">Neural Network</span>
+<div class="info-card">
+  <h3>GSERM-Projekt: Machine Learning mit R</h3>
+  <p>Vorhersage der Wahlbeteiligung mit LASSO, Random Forest und neuronalem
+  Netz — inklusive Vergleich der Modellgüte.</p>
+  <div class="tags">
+    <span class="tag">R</span>
+    <span class="tag">LASSO</span>
+    <span class="tag">Random Forest</span>
+    <span class="tag">Neural Network</span>
+  </div>
 </div>
 ```
-:::
 :::::::
 ::::::::
 

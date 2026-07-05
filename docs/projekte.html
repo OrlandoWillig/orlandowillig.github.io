@@ -78,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d14a38d981e09e9262c02958e18fbf88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-433cf56388dd5308684eab6c01c91ae2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-383874d1056d2bfd98227ba6d5105124.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -229,27 +229,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="reveal-on-scroll">
 <div class="card-grid">
 <div class="info-card">
-<pre><code>&lt;h3&gt;tbd
-&lt;/div&gt;</code></pre>
+  <h3 class="anchored">tbd</h3>
 </div>
+
 <div class="info-card">
-<pre><code>&lt;h3&gt;tbd
-&lt;/div&gt;</code></pre>
+  <h3 class="anchored">tbd</h3>
 </div>
+
 <div class="info-card">
-<pre><code>&lt;h3&gt;tbd
-&lt;/div&gt;</code></pre>
+  <h3 class="anchored">tbd</h3>
 </div>
+
 <div class="info-card">
-<pre><code>&lt;h3&gt;GSERM-Projekt: Machine Learning mit R&lt;/h3&gt;
-&lt;p&gt;Vorhersage der Wahlbeteiligung mit LASSO, Random Forest und neuronalem
-Netz — inklusive Vergleich der Modellgüte.&lt;/p&gt;
-&lt;div class="tags"&gt;
-  &lt;span class="tag"&gt;R&lt;/span&gt;
-  &lt;span class="tag"&gt;LASSO&lt;/span&gt;
-  &lt;span class="tag"&gt;Random Forest&lt;/span&gt;
-  &lt;span class="tag"&gt;Neural Network&lt;/span&gt;
-&lt;/div&gt;</code></pre>
+  <h3 class="anchored">GSERM-Projekt: Machine Learning mit R</h3>
+  <p>Vorhersage der Wahlbeteiligung mit LASSO, Random Forest und neuronalem
+  Netz — inklusive Vergleich der Modellgüte.</p>
+  <div class="tags">
+    <span class="tag">R</span>
+    <span class="tag">LASSO</span>
+    <span class="tag">Random Forest</span>
+    <span class="tag">Neural Network</span>
+  </div>
 </div>
 </div>
 </div>
@@ -258,30 +258,30 @@ Netz — inklusive Vergleich der Modellgüte.&lt;/p&gt;
 <div class="reveal-on-scroll">
 <p>Kleine interaktive Vorschau auf ein Resultat aus dem GSERM-Projekt. Die Werte sind derzeit Platzhalter und werden durch die echten Feature-Importance-Werte ersetzt.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-startfrom="50" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 49;"><span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [</span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Alter"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.28</span> }<span class="op">,</span></span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Bildung"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.22</span> }<span class="op">,</span></span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Einkommen"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.17</span> }<span class="op">,</span></span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Region"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.13</span> }<span class="op">,</span></span>
-<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Vorwahlbeteiligung"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.12</span> }<span class="op">,</span></span>
-<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Parteibindung"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.08</span> }</span>
-<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">130</span><span class="op">,</span></span>
-<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">"Wichtigkeit"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
-<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span> }<span class="op">,</span></span>
-<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> { <span class="dt">scheme</span><span class="op">:</span> <span class="st">"greens"</span> }<span class="op">,</span></span>
-<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">barX</span>(data<span class="op">,</span> {</span>
-<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"importance"</span><span class="op">,</span></span>
-<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"feature"</span><span class="op">,</span></span>
-<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"importance"</span><span class="op">,</span></span>
-<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>      <span class="dt">sort</span><span class="op">:</span> { <span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span> }</span>
-<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">0</span>])</span>
-<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="41" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 40;"><span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Alter"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.28</span> }<span class="op">,</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Bildung"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.22</span> }<span class="op">,</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Einkommen"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.17</span> }<span class="op">,</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Region"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.13</span> }<span class="op">,</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Vorwahlbeteiligung"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.12</span> }<span class="op">,</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">feature</span><span class="op">:</span> <span class="st">"Parteibindung"</span><span class="op">,</span> <span class="dt">importance</span><span class="op">:</span> <span class="fl">0.08</span> }</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">130</span><span class="op">,</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">"Wichtigkeit"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span> }<span class="op">,</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> { <span class="dt">scheme</span><span class="op">:</span> <span class="st">"greens"</span> }<span class="op">,</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">barX</span>(data<span class="op">,</span> {</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"importance"</span><span class="op">,</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"feature"</span><span class="op">,</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"importance"</span><span class="op">,</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>      <span class="dt">sort</span><span class="op">:</span> { <span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span> }</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">0</span>])</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -316,6 +316,72 @@ Note
 </section>
 
 </main> <!-- /main -->
+<!-- Google-Translate-Umschalter (DE <-> EN) -->
+<script>
+(function () {
+  // Google-Translate-Widget (versteckt) initialisieren
+  window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement(
+      { pageLanguage: "de", includedLanguages: "en,de", autoDisplay: false },
+      "google_translate_element"
+    );
+  };
+
+  function loadWidget() {
+    if (document.getElementById("google_translate_element")) return;
+    var div = document.createElement("div");
+    div.id = "google_translate_element";
+    div.style.display = "none";
+    document.body.appendChild(div);
+
+    var s = document.createElement("script");
+    s.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    document.body.appendChild(s);
+  }
+
+  // Ziel-Sprache im versteckten Google-Select setzen
+  function setLang(lang) {
+    var combo = document.querySelector(".goog-te-combo");
+    if (!combo) return false;
+    combo.value = lang;
+    combo.dispatchEvent(new Event("change"));
+    return true;
+  }
+
+  function addButton() {
+    var container =
+      document.querySelector("#navbarCollapse") ||
+      document.querySelector(".navbar-container") ||
+      document.querySelector(".navbar");
+    if (!container) return;
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "lang-toggle";
+    btn.textContent = "EN";
+    btn.setAttribute("aria-label", "Translate page to English");
+
+    var translated = false;
+    btn.addEventListener("click", function () {
+      var target = translated ? "de" : "en";
+      var tries = 0;
+      (function attempt() {
+        if (setLang(target)) {
+          translated = !translated;
+          btn.textContent = translated ? "DE" : "EN";
+        } else if (tries++ < 25) {
+          setTimeout(attempt, 150);
+        }
+      })();
+    });
+
+    container.appendChild(btn);
+  }
+
+  loadWidget();
+  addButton();
+})();
+</script>
 <script type="ojs-module-contents">
 eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRhdGEgPSBbXG4gIHsgZmVhdHVyZTogXCJBbHRlclwiLCBpbXBvcnRhbmNlOiAwLjI4IH0sXG4gIHsgZmVhdHVyZTogXCJCaWxkdW5nXCIsIGltcG9ydGFuY2U6IDAuMjIgfSxcbiAgeyBmZWF0dXJlOiBcIkVpbmtvbW1lblwiLCBpbXBvcnRhbmNlOiAwLjE3IH0sXG4gIHsgZmVhdHVyZTogXCJSZWdpb25cIiwgaW1wb3J0YW5jZTogMC4xMyB9LFxuICB7IGZlYXR1cmU6IFwiVm9yd2FobGJldGVpbGlndW5nXCIsIGltcG9ydGFuY2U6IDAuMTIgfSxcbiAgeyBmZWF0dXJlOiBcIlBhcnRlaWJpbmR1bmdcIiwgaW1wb3J0YW5jZTogMC4wOCB9XG5dXG5cblBsb3QucGxvdCh7XG4gIG1hcmdpbkxlZnQ6IDEzMCxcbiAgeDogeyBsYWJlbDogXCJXaWNodGlna2VpdFwiLCBncmlkOiB0cnVlIH0sXG4gIHk6IHsgbGFiZWw6IG51bGwgfSxcbiAgY29sb3I6IHsgc2NoZW1lOiBcImdyZWVuc1wiIH0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5iYXJYKGRhdGEsIHtcbiAgICAgIHg6IFwiaW1wb3J0YW5jZVwiLFxuICAgICAgeTogXCJmZWF0dXJlXCIsXG4gICAgICBmaWxsOiBcImltcG9ydGFuY2VcIixcbiAgICAgIHNvcnQ6IHsgeTogXCJ4XCIsIHJldmVyc2U6IHRydWUgfVxuICAgIH0pLFxuICAgIFBsb3QucnVsZVgoWzBdKVxuICBdXG59KVxuIn1dfQ==
 </script>

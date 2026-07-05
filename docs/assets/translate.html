@@ -1,0 +1,66 @@
+<!-- Google-Translate-Umschalter (DE <-> EN) -->
+<script>
+(function () {
+  // Google-Translate-Widget (versteckt) initialisieren
+  window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement(
+      { pageLanguage: "de", includedLanguages: "en,de", autoDisplay: false },
+      "google_translate_element"
+    );
+  };
+
+  function loadWidget() {
+    if (document.getElementById("google_translate_element")) return;
+    var div = document.createElement("div");
+    div.id = "google_translate_element";
+    div.style.display = "none";
+    document.body.appendChild(div);
+
+    var s = document.createElement("script");
+    s.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    document.body.appendChild(s);
+  }
+
+  // Ziel-Sprache im versteckten Google-Select setzen
+  function setLang(lang) {
+    var combo = document.querySelector(".goog-te-combo");
+    if (!combo) return false;
+    combo.value = lang;
+    combo.dispatchEvent(new Event("change"));
+    return true;
+  }
+
+  function addButton() {
+    var container =
+      document.querySelector("#navbarCollapse") ||
+      document.querySelector(".navbar-container") ||
+      document.querySelector(".navbar");
+    if (!container) return;
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "lang-toggle";
+    btn.textContent = "EN";
+    btn.setAttribute("aria-label", "Translate page to English");
+
+    var translated = false;
+    btn.addEventListener("click", function () {
+      var target = translated ? "de" : "en";
+      var tries = 0;
+      (function attempt() {
+        if (setLang(target)) {
+          translated = !translated;
+          btn.textContent = translated ? "DE" : "EN";
+        } else if (tries++ < 25) {
+          setTimeout(attempt, 150);
+        }
+      })();
+    });
+
+    container.appendChild(btn);
+  }
+
+  loadWidget();
+  addButton();
+})();
+</script>
