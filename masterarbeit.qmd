@@ -2,36 +2,16 @@
 title: "Masterarbeit"
 ---
 
-::: callout-note
-Diese Sektion ist ein Platzhalter. Titel, Abstract, Methodik und Kernresultate folgen, sobald die Details vorliegen.
-:::
-
-## Titel
-
-::: reveal-on-scroll
-*\[Platzhalter — Titel der Masterarbeit\]*
-:::
-
 ## Abstract
 
-::: reveal-on-scroll
-*\[Platzhalter — kurzer Abstract: Fragestellung, Kontext und wichtigste Erkenntnis in wenigen Sätzen.\]*
-:::
+Liberale Demokratien sind nicht so stabil wie einst gedacht. Die Autokratisierungen in Ländern wie Ungarn, Polen oder den USA zeigen auf, dass sich die Situation in gefestigten Demokratien schnell verschlechtern kann. Bisweilen ist noch unklar, weshalb sich Autokratisierungsepisoden zunehmend in Demokratien ereignen. Nur durch das Verständnis über die Hintergründe können jedoch Gegenmassnahmen ergriffen werden. In dieser Arbeit argumentiere ich, dass die affektive Polarisierung eine der Hauptauslöser hinter der sogenannten demokratischen Rezession ist. Durch die Spaltung der Gesellschaft, in sich feindlich gegenüberstehende Gruppierungen, wird undemokratisches Verhalten zunehmend toleriert, da eine Erosion liberal-demokratischer Prinzipien stattfindet. Ich untersuche diesen Zusammenhang aus zwei Perspektiven: Auf der Makroebene verwende ich eine Paneldatenanalyse, um mit Hilfe von CSES- und V-Dem-Daten aufzuzeigen, dass die affektive Polarisierung sich negativ auf die Demokratiequalität auswirkt. Auf der Mikroebene zeige ich mittels EES-Daten, dass starke Zuneigungen zur eigenen Gruppe mit einer schwächeren Unterstützung demokratischer Prinzipien einhergeht und die Abneigungen gegenüber fremden Gruppen sowohl demokratieschützend als auch -schädigend wirken können, da sie einerseits zu einer stärkeren Überwachung der Gegner führen, aber auch einen Mangel an Alternativen suggerieren. Schlussendlich hebt die Arbeit die Signifikanz der affektiven Polarisierung für Autokratisierungen innerhalb von Demokratien hervor und zeigt auf, dass eine Aufteilung in Effekte der Fremd- und Eigengruppen zwingend erforderlich ist. Die zukünftige Forschung sollte diese Erkenntnisse zur weiteren Vertiefung nutzen, um festzustellen, welche gesellschaftlichen Konflikte im Zentrum des Phänomens stehen.
 
-## Methodik
+## PDF
 
-::: reveal-on-scroll
-*\[Platzhalter — verwendete Daten, Methoden und Vorgehen.\]*
-:::
-
-## Kernresultate
-
-::: reveal-on-scroll
-*\[Platzhalter — zentrale Ergebnisse und deren Bedeutung.\]*
-:::
+Die vollständige Arbeit ist auf Anfrage erhältlich.
 
 ```{=html}
-<!-- Optionaler PDF-Download, sobald verfügbar:
-[Masterarbeit als PDF herunterladen](assets/masterarbeit.pdf){.cta}
--->
+<a class="cta" href="mailto:orlando.willig@proton.me?subject=Anfrage%3A%20PDF%20Masterarbeit">
+  &#x2193;&nbsp; PDF anfordern
+</a>
 ```
