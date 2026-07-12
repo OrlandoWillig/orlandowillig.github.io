@@ -1,5 +1,8 @@
 ---
 title: "Über mich"
+include-after-body:
+  text: |
+    <script src="assets/decode.js"></script>
 ---
 
 ::: {.about-intro .reveal-on-scroll}
@@ -10,7 +13,7 @@ Daten — eine Kombination, die mir hilft, technische Systeme und ihre gesellsch
 Wirkung zusammen zu denken.
 :::
 
-## Werdegang
+## [Werdegang]{.decode-on-scroll}
 
 ::: reveal-on-scroll
 - **Politikwissenschaft** — Verständnis für Institutionen, öffentliche Aufgaben und Governance
@@ -18,11 +21,11 @@ Wirkung zusammen zu denken.
 - **Eidgenössische Finanzkontrolle (EFK), Bern** — Junior Prüfungsexperte & Data Analyst
 :::
 
-## Schwerpunkte
+## [Schwerpunkte]{.decode-on-scroll}
 
 :::: reveal-on-scroll
 ::: tags
-[Performance-Audit]{.tag} [Datenanalyse]{.tag} [R]{.tag} [SQL]{.tag} [Process Mining]{.tag} [KI-Governance]{.tag}
+[Performance-Audit]{.tag .decode-on-scroll} [Datenanalyse]{.tag .decode-on-scroll} [R]{.tag .decode-on-scroll} [SQL]{.tag .decode-on-scroll} [Process Mining]{.tag .decode-on-scroll} [KI-Governance]{.tag .decode-on-scroll}
 :::
 ::::
 
