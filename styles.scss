@@ -183,40 +183,12 @@ a:hover {
   border: 1px solid rgba(0, 255, 65, 0.18);
 }
 
-// ---------- Über mich: Portrait ----------
-.about-hero {
-  display: flex;
-  gap: 2.5rem;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-}
-
-.portrait {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  object-position: center 35%;
-  border-radius: 12px;
-  border: 1px solid $border-color;
-  flex-shrink: 0;
-}
-
+// ---------- Über mich ----------
 .about-intro {
-  flex: 1;
   font-size: 1.05rem;
   color: #b6c0cc;
   line-height: 1.7;
-}
-
-@media (max-width: 640px) {
-  .about-hero {
-    flex-direction: column;
-    align-items: center;
-  }
-  .portrait {
-    width: 200px;
-    height: 200px;
-  }
+  max-width: 700px;
 }
 
 // ---------- Publikationen: Klickbare Karte ----------
