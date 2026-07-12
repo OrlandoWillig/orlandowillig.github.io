@@ -9,6 +9,7 @@
 **/*.quarto_ipynb
 
 website-agent-prompt.md
+CLAUDE.md
 
 renv/
 renv.lock
