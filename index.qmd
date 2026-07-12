@@ -4,6 +4,7 @@ page-layout: full
 include-after-body:
   text: |
     <script src="assets/matrix.js"></script>
+    <script src="assets/graph.js"></script>
 ---
 
 ```{=html}
@@ -55,3 +56,25 @@ Meine Arbeit bewegt sich an der Schnittstelle von Prüfung, Daten und künstlich
 ```
 :::
 ::::
+
+## Themen im Zusammenhang
+
+::: reveal-on-scroll
+Ein interaktiver Überblick, wie sich meine Schwerpunkte, Fähigkeiten und Publikationen verbinden.
+:::
+
+```{=html}
+<div id="skill-graph" class="skill-graph"
+     role="img"
+     aria-label="Interaktiver Graph: Orlando Willig verbindet die Themenbereiche Politikwissenschaft, Data Analyse &amp; ML sowie Audit &amp; Governance mit einzelnen Fähigkeiten, der Masterarbeit und zwei Publikationen.">
+</div>
+<p class="graph-hint">Ziehbar · Hover/Tap für Details · grün umrandete Knoten führen zur jeweiligen Seite</p>
+<noscript>
+  <ul>
+    <li>Politikwissenschaft → Masterarbeit (Affektive Polarisierung &amp; demokratische Rezession)</li>
+    <li>Data Analyse &amp; ML → R, SQL, Process Mining</li>
+    <li>Audit &amp; Governance → EFK, Performance-Audit, KI-Governance, Agentic AI, CAATs</li>
+    <li>Publikationen: „Agentic AI und CAATs“ (ExpertFocus) und „Agentic AI und Performance Auditing“ (INTOSAI Journal)</li>
+  </ul>
+</noscript>
+```

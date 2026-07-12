@@ -312,3 +312,135 @@ body {
   }
   #matrix-canvas { display: none; }
 }
+
+// ---------- Skill-/Projekt-Graph ----------
+.skill-graph {
+  position: relative;
+  width: 100%;
+  max-width: 820px;
+  aspect-ratio: 860 / 560;
+  margin: 1.5rem auto 0.6rem;
+}
+
+.skill-graph-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+.graph-hint {
+  text-align: center;
+  font-family: $font-family-monospace;
+  font-size: 0.78rem;
+  color: #6b7683;
+  margin-top: 0.4rem;
+}
+
+.graph-link {
+  stroke: $border-color;
+  stroke-width: 1.2;
+}
+
+.graph-node circle {
+  fill: $anthracite;
+  stroke: $border-color;
+  stroke-width: 1.4;
+  transition: stroke 0.15s ease, fill 0.15s ease;
+}
+
+.graph-node .graph-label {
+  font-family: $font-family-monospace;
+  font-size: 10px;
+  fill: #8b96a3;
+  text-anchor: middle;
+  pointer-events: none;
+  user-select: none;
+}
+
+.graph-node--center circle {
+  fill: $anthracite-2;
+  stroke: $matrix-green;
+  stroke-width: 2;
+}
+
+.graph-node--center .graph-label {
+  fill: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.graph-node--hub circle {
+  fill: rgba(0, 255, 65, 0.08);
+  stroke: $matrix-green;
+  stroke-width: 1.6;
+}
+
+.graph-node--hub .graph-label {
+  fill: #fff;
+  font-size: 11px;
+}
+
+.graph-node--link circle {
+  fill: rgba(0, 255, 65, 0.14);
+  stroke: $matrix-green;
+  stroke-width: 1.6;
+  stroke-dasharray: 3 2;
+}
+
+.graph-node--link .graph-label {
+  fill: $matrix-green;
+}
+
+.graph-node {
+  cursor: grab;
+}
+
+.graph-node.is-linked {
+  cursor: pointer;
+}
+
+.graph-node:active {
+  cursor: grabbing;
+}
+
+.graph-node:hover circle,
+.graph-node:focus circle,
+.graph-node:focus-visible circle {
+  stroke: #fff;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 65, 0.5));
+}
+
+.graph-node:focus {
+  outline: none;
+}
+
+.graph-tooltip {
+  position: absolute;
+  z-index: 5;
+  max-width: 240px;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  background: $anthracite-2;
+  border: 1px solid $matrix-green-dim;
+  color: #d6dde3;
+  font-family: $font-family-monospace;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.graph-tooltip.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graph-node circle,
+  .graph-tooltip {
+    transition: none;
+  }
+}

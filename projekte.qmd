@@ -16,55 +16,6 @@ title: "Projekte"
 <div class="info-card">
   <h3>tbd</h3>
 </div>
-
-<div class="info-card">
-  <h3>GSERM-Projekt: Machine Learning mit R</h3>
-  <p>Vorhersage der Wahlbeteiligung mit LASSO, Random Forest und neuronalem
-  Netz — inklusive Vergleich der Modellgüte.</p>
-  <div class="tags">
-    <span class="tag">R</span>
-    <span class="tag">LASSO</span>
-    <span class="tag">Random Forest</span>
-    <span class="tag">Neural Network</span>
-  </div>
-</div>
 ```
 :::::::
 ::::::::
-
-## Feature Importance (GSERM-Projekt)
-
-::: reveal-on-scroll
-Kleine interaktive Vorschau auf ein Resultat aus dem GSERM-Projekt. Die Werte sind derzeit Platzhalter und werden durch die echten Feature-Importance-Werte ersetzt.
-
-```{ojs}
-data = [
-  { feature: "Alter", importance: 0.28 },
-  { feature: "Bildung", importance: 0.22 },
-  { feature: "Einkommen", importance: 0.17 },
-  { feature: "Region", importance: 0.13 },
-  { feature: "Vorwahlbeteiligung", importance: 0.12 },
-  { feature: "Parteibindung", importance: 0.08 }
-]
-
-Plot.plot({
-  marginLeft: 130,
-  x: { label: "Wichtigkeit", grid: true },
-  y: { label: null },
-  color: { scheme: "greens" },
-  marks: [
-    Plot.barX(data, {
-      x: "importance",
-      y: "feature",
-      fill: "importance",
-      sort: { y: "x", reverse: true }
-    }),
-    Plot.ruleX([0])
-  ]
-})
-```
-:::
-
-::: callout-note
-GitHub-Links und die echten Projektdaten ergänze ich, sobald sie vorliegen.
-:::

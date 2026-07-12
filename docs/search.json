@@ -35,6 +35,13 @@
     "text": "Schwerpunkte\nMeine Arbeit bewegt sich an der Schnittstelle von Prüfung, Daten und künstlicher Intelligenz. Ich achte auf saubere Methodik, nachvollziehbare Resultate und Werkzeuge, die im Prüfalltag tatsächlich Bestand haben."
   },
   {
+    "objectID": "index.html#themen-im-zusammenhang",
+    "href": "index.html#themen-im-zusammenhang",
+    "title": "Orlando Willig",
+    "section": "Themen im Zusammenhang",
+    "text": "Themen im Zusammenhang\n\nEin interaktiver Überblick, wie sich meine Schwerpunkte, Fähigkeiten und Publikationen verbinden.\n\n\n\nZiehbar · Hover/Tap für Details · grün umrandete Knoten führen zur jeweiligen Seite\n\n  \n    Politikwissenschaft → Masterarbeit (Affektive Polarisierung & demokratische Rezession)\n    Data Analyse & ML → R, SQL, Process Mining\n    Audit & Governance → EFK, Performance-Audit, KI-Governance, Agentic AI, CAATs\n    Publikationen: „Agentic AI und CAATs“ (ExpertFocus) und „Agentic AI und Performance Auditing“ (INTOSAI Journal)"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Über mich",
@@ -67,13 +74,6 @@
     "href": "projekte.html",
     "title": "Projekte",
     "section": "",
-    "text": "Vorhersage der Wahlbeteiligung mit LASSO, Random Forest und neuronalem\n  Netz — inklusive Vergleich der Modellgüte.\n  \n    R\n    LASSO\n    Random Forest\n    Neural Network"
-  },
-  {
-    "objectID": "projekte.html#feature-importance-gserm-projekt",
-    "href": "projekte.html#feature-importance-gserm-projekt",
-    "title": "Projekte",
-    "section": "Feature Importance (GSERM-Projekt)",
-    "text": "Feature Importance (GSERM-Projekt)\n\nKleine interaktive Vorschau auf ein Resultat aus dem GSERM-Projekt. Die Werte sind derzeit Platzhalter und werden durch die echten Feature-Importance-Werte ersetzt.\n\ndata = [\n  { feature: \"Alter\", importance: 0.28 },\n  { feature: \"Bildung\", importance: 0.22 },\n  { feature: \"Einkommen\", importance: 0.17 },\n  { feature: \"Region\", importance: 0.13 },\n  { feature: \"Vorwahlbeteiligung\", importance: 0.12 },\n  { feature: \"Parteibindung\", importance: 0.08 }\n]\n\nPlot.plot({\n  marginLeft: 130,\n  x: { label: \"Wichtigkeit\", grid: true },\n  y: { label: null },\n  color: { scheme: \"greens\" },\n  marks: [\n    Plot.barX(data, {\n      x: \"importance\",\n      y: \"feature\",\n      fill: \"importance\",\n      sort: { y: \"x\", reverse: true }\n    }),\n    Plot.ruleX([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nGitHub-Links und die echten Projektdaten ergänze ich, sobald sie vorliegen."
+    "text": "tbd\n\n\n\n  tbd\n\n\n\n  tbd"
   }
 ]
