@@ -2,10 +2,10 @@
 title: "Publikationen & Artikel"
 ---
 
-:::::: reveal-on-scroll
-::::: card-grid
+:::: reveal-on-scroll
+::: card-grid
 ```{=html}
-<a href="https://expertsuisse.ch/de/bibliothek/1097498/ef-2026-04-gesamtausgabe"
+<a href="https://www.efk.admin.ch/wp-content/uploads/publikationen/fachtexte/2026_04_building_a_future_digital_audit_workforce.pdf"
    target="_blank" rel="noopener"
    class="info-card info-card-link">
   <div class="meta">ExpertFocus · April 2026</div>
@@ -33,5 +33,5 @@ title: "Publikationen & Artikel"
   </div>
 </div>
 ```
-:::::
-::::::
+:::
+::::
