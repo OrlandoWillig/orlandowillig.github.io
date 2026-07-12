@@ -11,7 +11,8 @@ Liberale Demokratien sind nicht so stabil wie einst gedacht. Die Autokratisierun
 Die vollständige Arbeit ist auf Anfrage erhältlich.
 
 ```{=html}
-<a class="cta" href="mailto:orlando.willig@proton.me?subject=Anfrage%3A%20PDF%20Masterarbeit">
+<a class="cta js-mail-link" href="#" data-subject="Anfrage: PDF Masterarbeit">
   &#x2193;&nbsp; PDF anfordern
 </a>
+<script src="assets/contact.js"></script>
 ```
