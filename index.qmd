@@ -33,11 +33,11 @@ include-after-body:
 Meine Arbeit bewegt sich an der Schnittstelle von Prüfung, Daten und künstlicher Intelligenz. Ich achte auf saubere Methodik, nachvollziehbare Resultate und Werkzeuge, die im Prüfalltag tatsächlich Bestand haben.
 :::
 
-::::::: reveal-on-scroll
-:::::: card-grid
+:::: reveal-on-scroll
+::: card-grid
 ```{=html}
 <div class="info-card">
-  <h3>IT- &amp; Performance-Audit</h3>
+  <h3>Performance- &amp; KI-Audit</h3>
   <p>Prüfung von Systemen, Prozessen und Wirksamkeit — mit Blick auf Risiken
   und Wirtschaftlichkeit.</p>
 </div>
@@ -53,5 +53,5 @@ Meine Arbeit bewegt sich an der Schnittstelle von Prüfung, Daten und künstlich
   Kontrollrahmen.</p>
 </div>
 ```
-::::::
-:::::::
+:::
+::::
