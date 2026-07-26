@@ -7,39 +7,67 @@
     "text": "ExpertFocus · April 2026\n  Agentic AI und CAATs\n  Artikel gemeinsam mit Marco Schreyer über den Einsatz agentischer KI in\n  computergestützten Prüfungstechniken (CAATs).\n  \n    Agentic AI\n    CAATs\n    Audit\n  \n  Zum Artikel →\n\n\n  INTOSAI Journal · Q3 2026\n  Agentic AI und Performance Auditing\n  Artikel darüber, wie agentische KI-Ansätze das Performance Auditing\n  unterstützen können.\n  \n    Agentic AI\n    Performance Audit"
   },
   {
-    "objectID": "masterarbeit.html",
-    "href": "masterarbeit.html",
-    "title": "Masterarbeit",
+    "objectID": "projekt-wahlbeteiligung.html",
+    "href": "projekt-wahlbeteiligung.html",
+    "title": "Wer sagt, dass er gewählt hat?",
     "section": "",
-    "text": "Liberale Demokratien sind nicht so stabil wie einst gedacht. Die Autokratisierungen in Ländern wie Ungarn, Polen oder den USA zeigen auf, dass sich die Situation in gefestigten Demokratien schnell verschlechtern kann. Bisweilen ist noch unklar, weshalb sich Autokratisierungsepisoden zunehmend in Demokratien ereignen. Nur durch das Verständnis über die Hintergründe können jedoch Gegenmassnahmen ergriffen werden. In dieser Arbeit argumentiere ich, dass die affektive Polarisierung eine der Hauptauslöser hinter der sogenannten demokratischen Rezession ist. Durch die Spaltung der Gesellschaft, in sich feindlich gegenüberstehende Gruppierungen, wird undemokratisches Verhalten zunehmend toleriert, da eine Erosion liberal-demokratischer Prinzipien stattfindet. Ich untersuche diesen Zusammenhang aus zwei Perspektiven: Auf der Makroebene verwende ich eine Paneldatenanalyse, um mit Hilfe von CSES- und V-Dem-Daten aufzuzeigen, dass die affektive Polarisierung sich negativ auf die Demokratiequalität auswirkt. Auf der Mikroebene zeige ich mittels EES-Daten, dass starke Zuneigungen zur eigenen Gruppe mit einer schwächeren Unterstützung demokratischer Prinzipien einhergeht und die Abneigungen gegenüber fremden Gruppen sowohl demokratieschützend als auch -schädigend wirken können, da sie einerseits zu einer stärkeren Überwachung der Gegner führen, aber auch einen Mangel an Alternativen suggerieren. Schlussendlich hebt die Arbeit die Signifikanz der affektiven Polarisierung für Autokratisierungen innerhalb von Demokratien hervor und zeigt auf, dass eine Aufteilung in Effekte der Fremd- und Eigengruppen zwingend erforderlich ist. Die zukünftige Forschung sollte diese Erkenntnisse zur weiteren Vertiefung nutzen, um festzustellen, welche gesellschaftlichen Konflikte im Zentrum des Phänomens stehen."
+    "text": "Ein Klassifikationsmodell auf 25’644 Befragten aus 27 EU-Staaten — und die Frage, was es eigentlich misst: die Wahlbeteiligung oder die Bereitschaft, sie zu behaupten. Entstanden als Abschlussprojekt des GSERM-Kurses «Machine Learning with R» an der Universität St. Gallen.\nDie Grafiken konnten nicht geladen werden. Die Kennzahlen stehen im PDF des Berichts."
   },
   {
-    "objectID": "masterarbeit.html#abstract",
-    "href": "masterarbeit.html#abstract",
-    "title": "Masterarbeit",
+    "objectID": "projekt-wahlbeteiligung.html#die-lücke",
+    "href": "projekt-wahlbeteiligung.html#die-lücke",
+    "title": "Wer sagt, dass er gewählt hat?",
+    "section": "Die Lücke",
+    "text": "Die Lücke\n\nIn der Befragung geben 75.4 % an, an der Europawahl 2024 teilgenommen zu haben. Offiziell lag die Beteiligung EU-weit bei 50.74 %. Diese Differenz ist keine Messungenauigkeit, sondern ein bekanntes Muster: Wählen gilt als sozial erwünscht, also wird es überberichtet. Interessant ist, wie ungleich das ausfällt.\n\n\n  \n    turnout_gap.svg\n    sortiert nach Differenz\n  \n  \n  → seitlich scrollbar\n  \n  \n    Wo Wahlpflicht gilt, verschwindet die Lücke fast — Belgien liegt 2.1 Punkte über\n    dem amtlichen Ergebnis. Wo die tatsächliche Beteiligung tief ist, öffnet sie sich\n    am weitesten: in Portugal um 45.6, in Polen um 39.8 Punkte. Offizielle Werte:\n    Europäisches Parlament (Verian), Endergebnis Europawahl 2024.\n  \n\n\nDamit steht fest, was das Modell überhaupt lernen kann: berichtete Teilnahme. Diese Unterscheidung zieht sich durch die ganze Arbeit — sie ist keine Fussnote, sondern die zentrale Einschränkung."
+  },
+  {
+    "objectID": "projekt-wahlbeteiligung.html#drei-modelle",
+    "href": "projekt-wahlbeteiligung.html#drei-modelle",
+    "title": "Wer sagt, dass er gewählt hat?",
+    "section": "Drei Modelle",
+    "text": "Drei Modelle\n\nEin regularisiertes lineares Modell, ein Baum-Ensemble und ein kleines neuronales Netz — auf demselben Rezept, derselben 80/20-Teilung, derselben Kreuzvalidierung. Bewertet wird primär über die AUC, weil sie unabhängig von der Klassifikationsschwelle ist und die Klassen mit 75 zu 25 deutlich ungleich verteilt sind.\n\n\n\n\nDer Schritt vom linearen Modell zum Ensemble bringt 0.0094 AUC. Der DeLong-Test nennt das signifikant (p = 0.0074) — bei 5’129 Testfällen ist fast alles signifikant. Substanziell ist es nicht."
+  },
+  {
+    "objectID": "projekt-wahlbeteiligung.html#trennschärfe-ist-nicht-verlässlichkeit",
+    "href": "projekt-wahlbeteiligung.html#trennschärfe-ist-nicht-verlässlichkeit",
+    "title": "Wer sagt, dass er gewählt hat?",
+    "section": "Trennschärfe ist nicht Verlässlichkeit",
+    "text": "Trennschärfe ist nicht Verlässlichkeit\n\nLinks: wie gut die Modelle Wähler von Nichtwählern trennen. Rechts: ob man den ausgegebenen Wahrscheinlichkeiten glauben darf. Die beiden Fragen fallen auseinander.\n\n\n  \n    \n      roc_curves.svg\n      Testset\n    \n    \n    \n  \n\n  \n    \n      calibration.svg\n      10 Bins\n    \n    \n    \n  \n\n\nDie ROC-Kurven liegen nahezu übereinander. Die Kalibrierung nicht: Das neuronale Netz belegt nur die mittleren Wahrscheinlichkeitsbereiche und liegt dort systematisch daneben. Im Bin 0.6 bis 0.7 sagt es 66 % voraus — tatsächlich haben 82 % gewählt. Sein Brier-Score fällt entsprechend ab. Wer die Wahrscheinlichkeiten selbst braucht und nicht nur eine Rangfolge, nimmt LASSO oder den Random Forest."
+  },
+  {
+    "objectID": "projekt-wahlbeteiligung.html#die-schwelle-entscheidet",
+    "href": "projekt-wahlbeteiligung.html#die-schwelle-entscheidet",
+    "title": "Wer sagt, dass er gewählt hat?",
+    "section": "Die Schwelle entscheidet",
+    "text": "Die Schwelle entscheidet\n\nDrei Viertel der Befragten geben an, gewählt zu haben. Ein Modell, das bei 0.5 trennt, sagt deshalb fast allen «hat gewählt» — und liegt damit oft richtig, ohne etwas zu leisten. Der Regler zeigt, ab wann die Minderheit sichtbar wird.\n\n\n  \n    threshold_explorer\n    interaktiv\n  \n  \n    \n    \n      \n        Klassifikationsschwelle\n        0.500\n      \n      \n    \n    \n      auf Youden-Optimum setzen"
+  },
+  {
+    "objectID": "projekt-wahlbeteiligung.html#woran-das-modell-sich-hält",
+    "href": "projekt-wahlbeteiligung.html#woran-das-modell-sich-hält",
+    "title": "Wer sagt, dass er gewählt hat?",
+    "section": "Woran das Modell sich hält",
+    "text": "Woran das Modell sich hält\n\nPermutation Importance des Random Forest: wie stark die Trefferquote einbricht, wenn man einen Prädiktor zufällig durchmischt.\n\n\n  \n    importance.svg\n    Random Forest, Out-of-Bag\n  \n  \n  → seitlich scrollbar\n  \n  \n    Aufmerksamkeit für den Wahlkampf und politisches Interesse dominieren, das Alter\n    folgt. Bemerkenswert sind die Indikatoren für fehlende Antworten: Ob jemand die\n    Links-Rechts-Frage überhaupt beantwortet, trägt mehr Information als die Antwort\n    selbst. Eine Verweigerung ist eben kein zufälliges Loch in den Daten, sondern\n    selbst ein Signal — genau dafür setzt das Rezept diese Indikatoren, bevor es\n    fehlende Werte auffüllt."
+  },
+  {
+    "objectID": "projekt-wahlbeteiligung.html#das-modell-selbst-ausprobieren",
+    "href": "projekt-wahlbeteiligung.html#das-modell-selbst-ausprobieren",
+    "title": "Wer sagt, dass er gewählt hat?",
+    "section": "Das Modell selbst ausprobieren",
+    "text": "Das Modell selbst ausprobieren\n\n\nWichtig: Das Modell sagt voraus, ob jemand angibt, gewählt zu haben — nicht, ob jemand gewählt hat. Der Unterschied beträgt EU-weit rund 25 Prozentpunkte und ist nicht zufällig verteilt.\n\n\n\n  \n    lasso_live\n    rechnet im Browser\n  \n  \n    \n      \n        Alter45 Jahre\n        \n      \n      \n        Interesse an Politikziemlich interessiert\n        \n      \n      \n        Aufmerksamkeit für den Wahlkampf5 / 10\n        \n      \n      \n        Bindung an eine Parteinein\n        \n      \n    \n\n    \n      —\n      \n      \n        Wahrscheinlichkeit, dass diese Personangibt, gewählt zu haben\n      \n    \n  \n  \n    LASSO ist ein lineares Modell, also ist der Logit additiv in den Eingangsgrössen.\n    Die Rechnung im Browser ist deshalb dasselbe Modell wie im Bericht und keine\n    vereinfachte Nachbildung — geprüft gegen die R-Vorhersage bis auf 1·10⁻¹⁵.\n    Alle übrigen Merkmale stehen auf dem Median beziehungsweise dem häufigsten Wert\n    der Trainingsdaten."
+  },
+  {
+    "objectID": "projekt-wahlbeteiligung.html#methodik",
+    "href": "projekt-wahlbeteiligung.html#methodik",
+    "title": "Wer sagt, dass er gewählt hat?",
+    "section": "Methodik",
+    "text": "Methodik\n\n\n\nDaten, Aufbereitung und Modellierung im Detail\n\n\nDaten — European Election Study 2024, 27 EU-Staaten, 25’904 Befragte; nach Ausschluss fehlender Zielwerte 25’644.\nZielgrösse — q5, die Angabe zur Teilnahme an der Europawahl, binär codiert.\nPrädiktoren — 37 Variablen aus fünf Blöcken: Soziodemografie, Ideologie, Engagement und Vertrauen, Parteibindung, Wirtschaftswahrnehmung.\nFehlende Werte — Die Codes 96 bis 99 («trifft nicht zu», «verweigert», «weiss nicht», «fehlend») werden zu NA. Vor dem Auffüllen setzt das Rezept je Prädiktor einen Indikator, damit eine Verweigerung als Signal erhalten bleibt.\nRezept — Indikatoren für fehlende Werte, Median- und Modus-Imputation, Dummy-Codierung, Filter für Variablen mit fast keiner Streuung, Normalisierung. Identisch für alle drei Modelle.\nAufteilung — 80/20 stratifiziert nach der Zielgrösse (Training 20’515, Test 5’129), Hyperparameter über zehnfache Kreuzvalidierung.\nBewertung — AUC als schwellenunabhängiges Hauptmass, Brier-Score für die Kalibrierung, Youden-J für die Schwellenwahl.\n\n\n\n\nDer vollständige Bericht ist auf Anfrage erhältlich.\n\n  ↓  Bericht anfordern"
+  },
+  {
+    "objectID": "kontakt.html",
+    "href": "kontakt.html",
+    "title": "Kontakt",
     "section": "",
-    "text": "Liberale Demokratien sind nicht so stabil wie einst gedacht. Die Autokratisierungen in Ländern wie Ungarn, Polen oder den USA zeigen auf, dass sich die Situation in gefestigten Demokratien schnell verschlechtern kann. Bisweilen ist noch unklar, weshalb sich Autokratisierungsepisoden zunehmend in Demokratien ereignen. Nur durch das Verständnis über die Hintergründe können jedoch Gegenmassnahmen ergriffen werden. In dieser Arbeit argumentiere ich, dass die affektive Polarisierung eine der Hauptauslöser hinter der sogenannten demokratischen Rezession ist. Durch die Spaltung der Gesellschaft, in sich feindlich gegenüberstehende Gruppierungen, wird undemokratisches Verhalten zunehmend toleriert, da eine Erosion liberal-demokratischer Prinzipien stattfindet. Ich untersuche diesen Zusammenhang aus zwei Perspektiven: Auf der Makroebene verwende ich eine Paneldatenanalyse, um mit Hilfe von CSES- und V-Dem-Daten aufzuzeigen, dass die affektive Polarisierung sich negativ auf die Demokratiequalität auswirkt. Auf der Mikroebene zeige ich mittels EES-Daten, dass starke Zuneigungen zur eigenen Gruppe mit einer schwächeren Unterstützung demokratischer Prinzipien einhergeht und die Abneigungen gegenüber fremden Gruppen sowohl demokratieschützend als auch -schädigend wirken können, da sie einerseits zu einer stärkeren Überwachung der Gegner führen, aber auch einen Mangel an Alternativen suggerieren. Schlussendlich hebt die Arbeit die Signifikanz der affektiven Polarisierung für Autokratisierungen innerhalb von Demokratien hervor und zeigt auf, dass eine Aufteilung in Effekte der Fremd- und Eigengruppen zwingend erforderlich ist. Die zukünftige Forschung sollte diese Erkenntnisse zur weiteren Vertiefung nutzen, um festzustellen, welche gesellschaftlichen Konflikte im Zentrum des Phänomens stehen."
-  },
-  {
-    "objectID": "masterarbeit.html#pdf",
-    "href": "masterarbeit.html#pdf",
-    "title": "Masterarbeit",
-    "section": "PDF",
-    "text": "PDF\nDie vollständige Arbeit ist auf Anfrage erhältlich.\n\n  ↓  PDF anfordern"
-  },
-  {
-    "objectID": "index.html#schwerpunkte",
-    "href": "index.html#schwerpunkte",
-    "title": "Orlando Willig",
-    "section": "Schwerpunkte",
-    "text": "Schwerpunkte\nMeine Arbeit bewegt sich an der Schnittstelle von Prüfung, Daten und künstlicher Intelligenz. Ich achte auf saubere Methodik, nachvollziehbare Resultate und Werkzeuge, die im Prüfalltag tatsächlich Bestand haben."
-  },
-  {
-    "objectID": "index.html#themen-im-zusammenhang",
-    "href": "index.html#themen-im-zusammenhang",
-    "title": "Orlando Willig",
-    "section": "Themen im Zusammenhang",
-    "text": "Themen im Zusammenhang\n\nEin interaktiver Überblick, wie sich meine Schwerpunkte, Fähigkeiten und Publikationen verbinden.\n\n\n\nZiehbar · Hover/Tap für Details · grün umrandete Knoten führen zur jeweiligen Seite\n\n  \n    Politikwissenschaft → Masterarbeit (Affektive Polarisierung & demokratische Rezession)\n    Data Analyse & ML → R, SQL, Process Mining\n    Audit & Governance → EFK, Performance-Audit, KI-Governance, Agentic AI, CAATs\n    Publikationen: „Agentic AI und CAATs“ (ExpertFocus) und „Agentic AI und Performance Auditing“ (INTOSAI Journal)"
+    "text": "Ich freue mich über Nachrichten zu Audit, Datenanalyse und KI-Governance.\n\n\n\n  \n    \n      \n      \n    \n    E-Mail\n  \n\n  \n    \n      \n      \n      \n    \n    LinkedIn\n  \n\n  \n    \n      \n      \n    \n    GitHub"
   },
   {
     "objectID": "about.html",
@@ -63,17 +91,45 @@
     "text": "Schwerpunkte\n\n\nPerformance-Audit Datenanalyse R SQL Process Mining KI-Governance\n\n\n\nIch interessiere mich besonders dafür, wie sich KI im Prüfungswesen sinnvoll und kontrolliert einsetzen lässt — dort, wo sie die Arbeit von Prüferinnen und Prüfern stärkt, ohne Nachvollziehbarkeit und Verantwortung aufzugeben."
   },
   {
-    "objectID": "kontakt.html",
-    "href": "kontakt.html",
-    "title": "Kontakt",
+    "objectID": "index.html#schwerpunkte",
+    "href": "index.html#schwerpunkte",
+    "title": "Orlando Willig",
+    "section": "Schwerpunkte",
+    "text": "Schwerpunkte\nMeine Arbeit bewegt sich an der Schnittstelle von Prüfung, Daten und künstlicher Intelligenz. Ich achte auf saubere Methodik, nachvollziehbare Resultate und Werkzeuge, die im Prüfalltag tatsächlich Bestand haben."
+  },
+  {
+    "objectID": "index.html#themen-im-zusammenhang",
+    "href": "index.html#themen-im-zusammenhang",
+    "title": "Orlando Willig",
+    "section": "Themen im Zusammenhang",
+    "text": "Themen im Zusammenhang\n\nEin interaktiver Überblick, wie sich meine Schwerpunkte, Fähigkeiten und Publikationen verbinden.\n\n\n\nZiehbar · Hover/Tap für Details · grün umrandete Knoten führen zur jeweiligen Seite\n\n  \n    Politikwissenschaft → Masterarbeit (Affektive Polarisierung & demokratische Rezession)\n    Data Analyse & ML → R, SQL, Process Mining, Projekt Wahlbeteiligung (ML)\n    Audit & Governance → EFK, Performance-Audit, KI-Governance, Agentic AI, CAATs\n    Publikationen: „Agentic AI und CAATs“ (ExpertFocus) und „Agentic AI und Performance Auditing“ (INTOSAI Journal)"
+  },
+  {
+    "objectID": "masterarbeit.html",
+    "href": "masterarbeit.html",
+    "title": "Masterarbeit",
     "section": "",
-    "text": "Ich freue mich über Nachrichten zu Audit, Datenanalyse und KI-Governance.\n\n\n\n  \n    \n      \n      \n    \n    E-Mail\n  \n\n  \n    \n      \n      \n      \n    \n    LinkedIn\n  \n\n  \n    \n      \n      \n    \n    GitHub"
+    "text": "Liberale Demokratien sind nicht so stabil wie einst gedacht. Die Autokratisierungen in Ländern wie Ungarn, Polen oder den USA zeigen auf, dass sich die Situation in gefestigten Demokratien schnell verschlechtern kann. Bisweilen ist noch unklar, weshalb sich Autokratisierungsepisoden zunehmend in Demokratien ereignen. Nur durch das Verständnis über die Hintergründe können jedoch Gegenmassnahmen ergriffen werden. In dieser Arbeit argumentiere ich, dass die affektive Polarisierung eine der Hauptauslöser hinter der sogenannten demokratischen Rezession ist. Durch die Spaltung der Gesellschaft, in sich feindlich gegenüberstehende Gruppierungen, wird undemokratisches Verhalten zunehmend toleriert, da eine Erosion liberal-demokratischer Prinzipien stattfindet. Ich untersuche diesen Zusammenhang aus zwei Perspektiven: Auf der Makroebene verwende ich eine Paneldatenanalyse, um mit Hilfe von CSES- und V-Dem-Daten aufzuzeigen, dass die affektive Polarisierung sich negativ auf die Demokratiequalität auswirkt. Auf der Mikroebene zeige ich mittels EES-Daten, dass starke Zuneigungen zur eigenen Gruppe mit einer schwächeren Unterstützung demokratischer Prinzipien einhergeht und die Abneigungen gegenüber fremden Gruppen sowohl demokratieschützend als auch -schädigend wirken können, da sie einerseits zu einer stärkeren Überwachung der Gegner führen, aber auch einen Mangel an Alternativen suggerieren. Schlussendlich hebt die Arbeit die Signifikanz der affektiven Polarisierung für Autokratisierungen innerhalb von Demokratien hervor und zeigt auf, dass eine Aufteilung in Effekte der Fremd- und Eigengruppen zwingend erforderlich ist. Die zukünftige Forschung sollte diese Erkenntnisse zur weiteren Vertiefung nutzen, um festzustellen, welche gesellschaftlichen Konflikte im Zentrum des Phänomens stehen."
+  },
+  {
+    "objectID": "masterarbeit.html#abstract",
+    "href": "masterarbeit.html#abstract",
+    "title": "Masterarbeit",
+    "section": "",
+    "text": "Liberale Demokratien sind nicht so stabil wie einst gedacht. Die Autokratisierungen in Ländern wie Ungarn, Polen oder den USA zeigen auf, dass sich die Situation in gefestigten Demokratien schnell verschlechtern kann. Bisweilen ist noch unklar, weshalb sich Autokratisierungsepisoden zunehmend in Demokratien ereignen. Nur durch das Verständnis über die Hintergründe können jedoch Gegenmassnahmen ergriffen werden. In dieser Arbeit argumentiere ich, dass die affektive Polarisierung eine der Hauptauslöser hinter der sogenannten demokratischen Rezession ist. Durch die Spaltung der Gesellschaft, in sich feindlich gegenüberstehende Gruppierungen, wird undemokratisches Verhalten zunehmend toleriert, da eine Erosion liberal-demokratischer Prinzipien stattfindet. Ich untersuche diesen Zusammenhang aus zwei Perspektiven: Auf der Makroebene verwende ich eine Paneldatenanalyse, um mit Hilfe von CSES- und V-Dem-Daten aufzuzeigen, dass die affektive Polarisierung sich negativ auf die Demokratiequalität auswirkt. Auf der Mikroebene zeige ich mittels EES-Daten, dass starke Zuneigungen zur eigenen Gruppe mit einer schwächeren Unterstützung demokratischer Prinzipien einhergeht und die Abneigungen gegenüber fremden Gruppen sowohl demokratieschützend als auch -schädigend wirken können, da sie einerseits zu einer stärkeren Überwachung der Gegner führen, aber auch einen Mangel an Alternativen suggerieren. Schlussendlich hebt die Arbeit die Signifikanz der affektiven Polarisierung für Autokratisierungen innerhalb von Demokratien hervor und zeigt auf, dass eine Aufteilung in Effekte der Fremd- und Eigengruppen zwingend erforderlich ist. Die zukünftige Forschung sollte diese Erkenntnisse zur weiteren Vertiefung nutzen, um festzustellen, welche gesellschaftlichen Konflikte im Zentrum des Phänomens stehen."
+  },
+  {
+    "objectID": "masterarbeit.html#pdf",
+    "href": "masterarbeit.html#pdf",
+    "title": "Masterarbeit",
+    "section": "PDF",
+    "text": "PDF\nDie vollständige Arbeit ist auf Anfrage erhältlich.\n\n  ↓  PDF anfordern"
   },
   {
     "objectID": "projekte.html",
     "href": "projekte.html",
     "title": "Projekte",
     "section": "",
-    "text": "tbd\n\n\n\n  tbd\n\n\n\n  tbd"
+    "text": "GSERM St. Gallen — Machine Learning with R\n    Wer sagt, dass er gewählt hat?\n    Wahlbeteiligung bei der Europawahl 2024 vorhersagen — mit LASSO, Random Forest\n    und neuronalem Netz auf 25'644 Befragten aus 27 EU-Staaten. Mit interaktiven\n    Grafiken und einem Modell, das im Browser rechnet.\n    \n      R\n      tidymodels\n      LASSO\n      Random Forest\n      Neural Network\n    \n  \n  \n    AUC (Random Forest)0.7793\n    AUC (LASSO)0.7699\n    AUC (Neural Network)0.7588\n    Testfälle5'129\n  \n\n\n\n\n\n  tbd\n\n\n\n  tbd\n\n\n\n  tbd"
   }
 ]

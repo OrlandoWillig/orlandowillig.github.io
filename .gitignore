@@ -16,3 +16,6 @@ renv.lock
 006_Persoenliche_Webseite.Rproj
 .gitignoredocs/_site/
 .posit/assistant
+
+# Lokale Claude-Code-Tooling-Dateien
+.claude/
