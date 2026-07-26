@@ -66,13 +66,13 @@ Ein interaktiver Überblick, wie sich meine Schwerpunkte, Fähigkeiten und Publi
 ```{=html}
 <div id="skill-graph" class="skill-graph"
      role="img"
-     aria-label="Interaktiver Graph: Orlando Willig verbindet die Themenbereiche Politikwissenschaft, Data Analyse &amp; ML sowie Audit &amp; Governance mit einzelnen Fähigkeiten, der Masterarbeit und zwei Publikationen.">
+     aria-label="Interaktiver Graph: Orlando Willig verbindet die Themenbereiche Politikwissenschaft, Data Analyse &amp; ML sowie Audit &amp; Governance mit einzelnen Fähigkeiten, der Masterarbeit, einem Machine-Learning-Projekt und zwei Publikationen.">
 </div>
 <p class="graph-hint">Ziehbar · Hover/Tap für Details · grün umrandete Knoten führen zur jeweiligen Seite</p>
 <noscript>
   <ul>
     <li>Politikwissenschaft → Masterarbeit (Affektive Polarisierung &amp; demokratische Rezession)</li>
-    <li>Data Analyse &amp; ML → R, SQL, Process Mining</li>
+    <li>Data Analyse &amp; ML → R, SQL, Process Mining, <a href="projekt-wahlbeteiligung.html">Projekt Wahlbeteiligung (ML)</a></li>
     <li>Audit &amp; Governance → EFK, Performance-Audit, KI-Governance, Agentic AI, CAATs</li>
     <li>Publikationen: „Agentic AI und CAATs“ (ExpertFocus) und „Agentic AI und Performance Auditing“ (INTOSAI Journal)</li>
   </ul>
