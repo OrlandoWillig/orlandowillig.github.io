@@ -5,11 +5,12 @@ project:
     - "*.qmd"
   resources:
     - assets/
+    - CNAME
 
 website:
   title: "Orlando Willig"
   description: "Orlando Willig – Junior Prüfungsexperte und Data Analyst bei der Eidgenössischen Finanzkontrolle (EFK), Schweiz. Schwerpunkte: Performance Audit, Data Analytics, KI-Governance."
-  site-url: "https://orlandowillig.github.io"
+  site-url: "https://orlandowillig.ch"
   favicon: assets/favicon.svg
   open-graph: true
   navbar:
