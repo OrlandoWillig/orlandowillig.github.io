@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Machine Learning auf den Daten der European Election Study 2024 — und die Frage, was ein Modell für Wahlbeteiligung eigentlich misst.">
 
-<title>Orlando Willig — Audit trifft KI – Orlando Willig</title>
+<title>Wer sagt, dass er gewählt hat? – Orlando Willig</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -106,12 +107,12 @@ ul.task-list li input[type="checkbox"] {
 <script data-goatcounter="https://orlando-efk.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 
 
-<meta property="og:title" content="Orlando Willig — Audit trifft KI">
-<meta property="og:description" content="Orlando Willig – Junior Prüfungsexperte und Data Analyst bei der Eidgenössischen Finanzkontrolle (EFK), Schweiz. Schwerpunkte: Performance Audit, Data Analytics, KI-Governance.">
+<meta property="og:title" content="Wer sagt, dass er gewählt hat? – Orlando Willig">
+<meta property="og:description" content="Machine Learning auf den Daten der European Election Study 2024 — und die Frage, was ein Modell für Wahlbeteiligung eigentlich misst.">
 <meta property="og:site_name" content="Orlando Willig">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -133,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Start</span></a>
   </li>  
   <li class="nav-item">
@@ -164,74 +165,240 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Wer sagt, dass er gewählt hat?</h1>
+</div>
+
+<div>
+  <div class="description">
+    Machine Learning auf den Daten der European Election Study 2024 — und die Frage, was ein Modell für Wahlbeteiligung eigentlich misst.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<canvas id="matrix-canvas" aria-hidden="true"></canvas>
+</header>
 
-<section class="hero">
-  <div class="hero-name">Orlando Willig</div>
-  <div class="hero-claim">Junior Prüfungsexperte &amp; Data Analyst — Audit trifft KI</div>
-  <p class="hero-teaser">
-    Ich verbinde Performance-Audit mit Datenanalyse und angewandter KI.
-    Bei der Eidgenössischen Finanzkontrolle prüfe ich, wo Technik, Governance und
-    öffentliche Aufgabe aufeinandertreffen.
+
+<div class="reveal-on-scroll">
+<p>Ein Klassifikationsmodell auf 25’644 Befragten aus 27 EU-Staaten — und die Frage, was es eigentlich misst: die Wahlbeteiligung oder die Bereitschaft, sie zu behaupten. Entstanden als Abschlussprojekt des GSERM-Kurses «Machine Learning with R» an der Universität St.&nbsp;Gallen.</p>
+</div>
+<div class="reveal-on-scroll">
+<div class="tags">
+<p><span class="tag">R</span> <span class="tag">tidymodels</span> <span class="tag">LASSO</span> <span class="tag">Random Forest</span> <span class="tag">Neural Network</span> <span class="tag">EES 2024</span></p>
+</div>
+</div>
+<p id="viz-error" hidden="" class="viz-caption">
+  Die Grafiken konnten nicht geladen werden. Die Kennzahlen stehen im PDF des Berichts.
+</p>
+<section id="die-lücke" class="level2">
+<h2 class="anchored" data-anchor-id="die-lücke">Die Lücke</h2>
+<div class="reveal-on-scroll">
+<p>In der Befragung geben 75.4 % an, an der Europawahl 2024 teilgenommen zu haben. Offiziell lag die Beteiligung EU-weit bei 50.74 %. Diese Differenz ist keine Messungenauigkeit, sondern ein bekanntes Muster: Wählen gilt als sozial erwünscht, also wird es überberichtet. Interessant ist, wie ungleich das ausfällt.</p>
+</div>
+<div class="viz-frame reveal-on-scroll">
+  <div class="viz-frame__bar">
+    <span class="name">turnout_gap.svg</span>
+    <span>sortiert nach Differenz</span>
+  </div>
+  <div class="viz-frame__body"><div id="viz-gap"></div></div>
+  <p class="viz-scroll-hint" hidden="">→ seitlich scrollbar</p>
+  <div class="viz-legend" id="legend-gap"></div>
+  <p class="viz-caption">
+    Wo Wahlpflicht gilt, verschwindet die Lücke fast — Belgien liegt 2.1 Punkte über
+    dem amtlichen Ergebnis. Wo die tatsächliche Beteiligung tief ist, öffnet sie sich
+    am weitesten: in Portugal um 45.6, in Polen um 39.8 Punkte. Offizielle Werte:
+    Europäisches Parlament (Verian), Endergebnis Europawahl 2024.
   </p>
-  <nav class="cta-links">
-    <a class="cta" href="about.html">Über mich</a>
-    <a class="cta" href="masterarbeit.html">Masterarbeit</a>
-    <a class="cta" href="publikationen.html">Publikationen</a>
-    <a class="cta" href="projekte.html">Projekte</a>
-    <a class="cta" href="kontakt.html">Kontakt</a>
-  </nav>
-</section>
-<section id="schwerpunkte" class="level2 reveal-on-scroll">
-<h2 class="anchored" data-anchor-id="schwerpunkte">Schwerpunkte</h2>
-<p>Meine Arbeit bewegt sich an der Schnittstelle von Prüfung, Daten und künstlicher Intelligenz. Ich achte auf saubere Methodik, nachvollziehbare Resultate und Werkzeuge, die im Prüfalltag tatsächlich Bestand haben.</p>
-</section>
+</div>
 <div class="reveal-on-scroll">
-<div class="card-grid">
-<div class="info-card">
-  <h3 class="anchored">Performance- &amp; KI-Audit</h3>
-  <p>Prüfung von Systemen, Prozessen und Wirksamkeit — mit Blick auf Risiken
-  und Wirtschaftlichkeit.</p>
+<p>Damit steht fest, was das Modell überhaupt lernen kann: <strong>berichtete</strong> Teilnahme. Diese Unterscheidung zieht sich durch die ganze Arbeit — sie ist keine Fussnote, sondern die zentrale Einschränkung.</p>
 </div>
-
-<div class="info-card">
-  <h3 class="anchored">Datenanalyse</h3>
-  <p>R, SQL und Process Mining, um Prüfungsfragen empirisch zu beantworten.</p>
-</div>
-
-<div class="info-card">
-  <h3 class="anchored">KI-Governance</h3>
-  <p>Verantwortungsvoller Einsatz von KI — von der Methodik bis zum
-  Kontrollrahmen.</p>
-</div>
-</div>
-</div>
-<section id="themen-im-zusammenhang" class="level2">
-<h2 class="anchored" data-anchor-id="themen-im-zusammenhang">Themen im Zusammenhang</h2>
+</section>
+<section id="drei-modelle" class="level2">
+<h2 class="anchored" data-anchor-id="drei-modelle">Drei Modelle</h2>
 <div class="reveal-on-scroll">
-<p>Ein interaktiver Überblick, wie sich meine Schwerpunkte, Fähigkeiten und Publikationen verbinden.</p>
+<p>Ein regularisiertes lineares Modell, ein Baum-Ensemble und ein kleines neuronales Netz — auf demselben Rezept, derselben 80/20-Teilung, derselben Kreuzvalidierung. Bewertet wird primär über die AUC, weil sie unabhängig von der Klassifikationsschwelle ist und die Klassen mit 75 zu 25 deutlich ungleich verteilt sind.</p>
 </div>
-<div id="skill-graph" class="skill-graph" role="img" aria-label="Interaktiver Graph: Orlando Willig verbindet die Themenbereiche Politikwissenschaft, Data Analyse &amp; ML sowie Audit &amp; Governance mit einzelnen Fähigkeiten, der Masterarbeit, einem Machine-Learning-Projekt und zwei Publikationen.">
+<div class="metric-grid reveal-on-scroll" id="viz-tiles"></div>
+<div class="reveal-on-scroll">
+<div class="pull-quote">
+<p>Der Schritt vom linearen Modell zum Ensemble bringt <strong>0.0094 AUC</strong>. Der DeLong-Test nennt das signifikant (p = 0.0074) — bei 5’129 Testfällen ist fast alles signifikant. Substanziell ist es nicht.</p>
 </div>
-<p class="graph-hint">Ziehbar · Hover/Tap für Details · grün umrandete Knoten führen zur jeweiligen Seite</p>
-<noscript>
-  <ul>
-    <li>Politikwissenschaft → Masterarbeit (Affektive Polarisierung &amp; demokratische Rezession)</li>
-    <li>Data Analyse &amp; ML → R, SQL, Process Mining, <a href="projekt-wahlbeteiligung.html">Projekt Wahlbeteiligung (ML)</a></li>
-    <li>Audit &amp; Governance → EFK, Performance-Audit, KI-Governance, Agentic AI, CAATs</li>
-    <li>Publikationen: „Agentic AI und CAATs“ (ExpertFocus) und „Agentic AI und Performance Auditing“ (INTOSAI Journal)</li>
-  </ul>
-</noscript>
+</div>
+</section>
+<section id="trennschärfe-ist-nicht-verlässlichkeit" class="level2">
+<h2 class="anchored" data-anchor-id="trennschärfe-ist-nicht-verlässlichkeit">Trennschärfe ist nicht Verlässlichkeit</h2>
+<div class="reveal-on-scroll">
+<p>Links: wie gut die Modelle Wähler von Nichtwählern trennen. Rechts: ob man den ausgegebenen Wahrscheinlichkeiten glauben darf. Die beiden Fragen fallen auseinander.</p>
+</div>
+<div class="viz-duo reveal-on-scroll">
+  <div class="viz-frame">
+    <div class="viz-frame__bar">
+      <span class="name">roc_curves.svg</span>
+      <span>Testset</span>
+    </div>
+    <div class="viz-frame__body"><div id="viz-roc"></div></div>
+    <div class="viz-legend" id="legend-roc"></div>
+  </div>
+
+  <div class="viz-frame">
+    <div class="viz-frame__bar">
+      <span class="name">calibration.svg</span>
+      <span>10 Bins</span>
+    </div>
+    <div class="viz-frame__body"><div id="viz-calib"></div></div>
+    <div class="viz-legend" id="legend-calib"></div>
+  </div>
+</div>
+<div class="reveal-on-scroll">
+<p>Die ROC-Kurven liegen nahezu übereinander. Die Kalibrierung nicht: Das neuronale Netz belegt nur die mittleren Wahrscheinlichkeitsbereiche und liegt dort systematisch daneben. Im Bin 0.6 bis 0.7 sagt es 66 % voraus — tatsächlich haben 82 % gewählt. Sein Brier-Score fällt entsprechend ab. Wer die Wahrscheinlichkeiten selbst braucht und nicht nur eine Rangfolge, nimmt LASSO oder den Random Forest.</p>
+</div>
+</section>
+<section id="die-schwelle-entscheidet" class="level2">
+<h2 class="anchored" data-anchor-id="die-schwelle-entscheidet">Die Schwelle entscheidet</h2>
+<div class="reveal-on-scroll">
+<p>Drei Viertel der Befragten geben an, gewählt zu haben. Ein Modell, das bei 0.5 trennt, sagt deshalb fast allen «hat gewählt» — und liegt damit oft richtig, ohne etwas zu leisten. Der Regler zeigt, ab wann die Minderheit sichtbar wird.</p>
+</div>
+<div class="viz-frame reveal-on-scroll" id="viz-threshold">
+  <div class="viz-frame__bar">
+    <span class="name">threshold_explorer</span>
+    <span>interaktiv</span>
+  </div>
+  <div class="control-panel">
+    <div class="control-seg" id="thr-models" role="group" aria-label="Modell wählen"></div>
+    <div class="control-row">
+      <label for="thr-input">
+        <span>Klassifikationsschwelle</span>
+        <b id="thr-value">0.500</b>
+      </label>
+      <input type="range" id="thr-input" min="0" max="1" step="any" value="0.5">
+    </div>
+    <div class="control-seg">
+      <button type="button" id="thr-snap">auf Youden-Optimum setzen</button>
+    </div>
+  </div>
+  <div class="viz-frame__body">
+    <div class="cm-layout">
+      <div class="cm" id="thr-matrix"></div>
+      <div class="stat-list" id="thr-stats"></div>
+    </div>
+  </div>
+  <p class="viz-caption" id="thr-caption"></p>
+</div>
+</section>
+<section id="woran-das-modell-sich-hält" class="level2">
+<h2 class="anchored" data-anchor-id="woran-das-modell-sich-hält">Woran das Modell sich hält</h2>
+<div class="reveal-on-scroll">
+<p>Permutation Importance des Random Forest: wie stark die Trefferquote einbricht, wenn man einen Prädiktor zufällig durchmischt.</p>
+</div>
+<div class="viz-frame reveal-on-scroll">
+  <div class="viz-frame__bar">
+    <span class="name">importance.svg</span>
+    <span>Random Forest, Out-of-Bag</span>
+  </div>
+  <div class="viz-frame__body"><div id="viz-importance"></div></div>
+  <p class="viz-scroll-hint" hidden="">→ seitlich scrollbar</p>
+  <div class="viz-legend" id="legend-importance"></div>
+  <p class="viz-caption">
+    Aufmerksamkeit für den Wahlkampf und politisches Interesse dominieren, das Alter
+    folgt. Bemerkenswert sind die Indikatoren für fehlende Antworten: Ob jemand die
+    Links-Rechts-Frage überhaupt beantwortet, trägt mehr Information als die Antwort
+    selbst. Eine Verweigerung ist eben kein zufälliges Loch in den Daten, sondern
+    selbst ein Signal — genau dafür setzt das Rezept diese Indikatoren, bevor es
+    fehlende Werte auffüllt.
+  </p>
+</div>
+</section>
+<section id="das-modell-selbst-ausprobieren" class="level2">
+<h2 class="anchored" data-anchor-id="das-modell-selbst-ausprobieren">Das Modell selbst ausprobieren</h2>
+<div class="reveal-on-scroll">
+<div class="caveat">
+<p><strong>Wichtig:</strong> Das Modell sagt voraus, ob jemand <strong>angibt</strong>, gewählt zu haben — nicht, ob jemand gewählt hat. Der Unterschied beträgt EU-weit rund 25 Prozentpunkte und ist nicht zufällig verteilt.</p>
+</div>
+</div>
+<div class="viz-frame reveal-on-scroll" id="viz-predict">
+  <div class="viz-frame__bar">
+    <span class="name">lasso_live</span>
+    <span>rechnet im Browser</span>
+  </div>
+  <div class="predict">
+    <div class="control-panel">
+      <div class="control-row">
+        <label for="p-age"><span>Alter</span><b id="p-age-value">45 Jahre</b></label>
+        <input type="range" id="p-age" min="16" max="93" step="1" value="45">
+      </div>
+      <div class="control-row">
+        <label for="p-interest"><span>Interesse an Politik</span><b id="p-interest-value">ziemlich interessiert</b></label>
+        <input type="range" id="p-interest" min="1" max="4" step="1" value="2">
+      </div>
+      <div class="control-row">
+        <label for="p-attention"><span>Aufmerksamkeit für den Wahlkampf</span><b id="p-attention-value">5 / 10</b></label>
+        <input type="range" id="p-attention" min="0" max="10" step="1" value="5">
+      </div>
+      <div class="control-row">
+        <label for="p-pid"><span>Bindung an eine Partei</span><b id="p-pid-value">nein</b></label>
+        <input type="range" id="p-pid" min="0" max="1" step="1" value="0">
+      </div>
+    </div>
+
+    <div class="readout">
+      <div class="readout-value" id="p-output">—</div>
+      <div class="gauge"><i id="p-gauge" style="width:0%"></i></div>
+      <p class="readout-caption">
+        Wahrscheinlichkeit, dass diese Person<br>angibt, gewählt zu haben
+      </p>
+    </div>
+  </div>
+  <p class="viz-caption">
+    LASSO ist ein lineares Modell, also ist der Logit additiv in den Eingangsgrössen.
+    Die Rechnung im Browser ist deshalb dasselbe Modell wie im Bericht und keine
+    vereinfachte Nachbildung — geprüft gegen die R-Vorhersage bis auf 1·10⁻¹⁵.
+    Alle übrigen Merkmale stehen auf dem Median beziehungsweise dem häufigsten Wert
+    der Trainingsdaten.
+  </p>
+</div>
+</section>
+<section id="methodik" class="level2">
+<h2 class="anchored" data-anchor-id="methodik">Methodik</h2>
+<div class="reveal-on-scroll">
+<details>
+<summary>
+Daten, Aufbereitung und Modellierung im Detail
+</summary>
+<ul>
+<li><strong>Daten</strong> — European Election Study 2024, 27 EU-Staaten, 25’904 Befragte; nach Ausschluss fehlender Zielwerte 25’644.</li>
+<li><strong>Zielgrösse</strong> — <code>q5</code>, die Angabe zur Teilnahme an der Europawahl, binär codiert.</li>
+<li><strong>Prädiktoren</strong> — 37 Variablen aus fünf Blöcken: Soziodemografie, Ideologie, Engagement und Vertrauen, Parteibindung, Wirtschaftswahrnehmung.</li>
+<li><strong>Fehlende Werte</strong> — Die Codes 96 bis 99 («trifft nicht zu», «verweigert», «weiss nicht», «fehlend») werden zu <code>NA</code>. Vor dem Auffüllen setzt das Rezept je Prädiktor einen Indikator, damit eine Verweigerung als Signal erhalten bleibt.</li>
+<li><strong>Rezept</strong> — Indikatoren für fehlende Werte, Median- und Modus-Imputation, Dummy-Codierung, Filter für Variablen mit fast keiner Streuung, Normalisierung. Identisch für alle drei Modelle.</li>
+<li><strong>Aufteilung</strong> — 80/20 stratifiziert nach der Zielgrösse (Training 20’515, Test 5’129), Hyperparameter über zehnfache Kreuzvalidierung.</li>
+<li><strong>Bewertung</strong> — AUC als schwellenunabhängiges Hauptmass, Brier-Score für die Kalibrierung, Youden-J für die Schwellenwahl.</li>
+</ul>
+</details>
+</div>
+<div class="reveal-on-scroll">
+<p>Der vollständige Bericht ist auf Anfrage erhältlich.</p>
+<a class="cta js-mail-link" href="#" data-subject="Anfrage: Bericht GSERM-Projekt Wahlbeteiligung">
+  ↓&nbsp; Bericht anfordern
+</a>
+</div>
 
 
 </section>
@@ -717,8 +884,8 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
-<script src="assets/matrix.js"></script>
-<script src="assets/graph.js"></script>
+<script src="assets/viz-turnout.js"></script>
+<script src="assets/contact.js"></script>
 
 
 

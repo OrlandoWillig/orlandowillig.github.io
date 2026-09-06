@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://orlandowillig.ch/publikationen.html</loc>
+    <loc>https://orlandowillig.github.io/publikationen.html</loc>
     <lastmod>2026-07-12T07:44:01.901Z</lastmod>
   </url>
   <url>
-    <loc>https://orlandowillig.ch/masterarbeit.html</loc>
-    <lastmod>2026-07-26T21:23:34.374Z</lastmod>
+    <loc>https://orlandowillig.github.io/projekt-wahlbeteiligung.html</loc>
+    <lastmod>2026-07-26T21:05:34.410Z</lastmod>
   </url>
   <url>
-    <loc>https://orlandowillig.ch/index.html</loc>
-    <lastmod>2026-09-06T12:23:16.100Z</lastmod>
+    <loc>https://orlandowillig.github.io/kontakt.html</loc>
+    <lastmod>2026-07-26T20:37:01.981Z</lastmod>
   </url>
   <url>
-    <loc>https://orlandowillig.ch/about.html</loc>
-    <lastmod>2026-07-26T21:23:34.368Z</lastmod>
+    <loc>https://orlandowillig.github.io/about.html</loc>
+    <lastmod>2026-07-26T20:37:01.977Z</lastmod>
   </url>
   <url>
-    <loc>https://orlandowillig.ch/kontakt.html</loc>
-    <lastmod>2026-07-26T21:23:34.373Z</lastmod>
+    <loc>https://orlandowillig.github.io/index.html</loc>
+    <lastmod>2026-07-26T20:55:40.905Z</lastmod>
   </url>
   <url>
-    <loc>https://orlandowillig.ch/projekte.html</loc>
-    <lastmod>2026-09-06T12:23:16.101Z</lastmod>
+    <loc>https://orlandowillig.github.io/masterarbeit.html</loc>
+    <lastmod>2026-07-26T20:37:01.981Z</lastmod>
+  </url>
+  <url>
+    <loc>https://orlandowillig.github.io/projekte.html</loc>
+    <lastmod>2026-07-26T20:55:17.177Z</lastmod>
   </url>
 </urlset>

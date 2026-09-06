@@ -22,6 +22,10 @@
     { id: "masterarbeit", label: "Masterarbeit", type: "link", href: "masterarbeit.html",
       desc: "Affektive Polarisierung & demokratische Rezession — Paneldatenanalyse mit CSES-, V-Dem- und EES-Daten" },
 
+    { id: "wahlbeteiligung", label: "Wahlbeteiligung (ML)", type: "link",
+      href: "projekt-wahlbeteiligung.html",
+      desc: "GSERM-Projekt — Wahlbeteiligung bei der Europawahl 2024 mit LASSO, Random Forest und neuronalem Netz" },
+
     { id: "r", label: "R", type: "leaf", desc: "Statistische Analyse und Modellierung" },
     { id: "sql", label: "SQL", type: "leaf", desc: "Datenabfragen und -aufbereitung" },
     { id: "processmining", label: "Process Mining", type: "leaf", desc: "Analyse von Prüfprozessen" },
@@ -48,6 +52,7 @@
     ["orlando", "data", 200],
     ["orlando", "audit", 200],
     ["polwiss", "masterarbeit", 110],
+    ["data", "wahlbeteiligung", 115],
     ["data", "r", 100],
     ["data", "sql", 100],
     ["data", "processmining", 100],

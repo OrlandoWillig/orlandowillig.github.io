@@ -2,6 +2,33 @@
 title: "Projekte"
 ---
 
+::: reveal-on-scroll
+```{=html}
+<a class="featured-card" href="projekt-wahlbeteiligung.html">
+  <div>
+    <div class="meta">GSERM St. Gallen — Machine Learning with R</div>
+    <h3>Wer sagt, dass er gewählt hat?</h3>
+    <p>Wahlbeteiligung bei der Europawahl 2024 vorhersagen — mit LASSO, Random Forest
+    und neuronalem Netz auf 25'644 Befragten aus 27 EU-Staaten. Mit interaktiven
+    Grafiken und einem Modell, das im Browser rechnet.</p>
+    <div class="tags">
+      <span class="tag">R</span>
+      <span class="tag">tidymodels</span>
+      <span class="tag">LASSO</span>
+      <span class="tag">Random Forest</span>
+      <span class="tag">Neural Network</span>
+    </div>
+  </div>
+  <div class="featured-metrics">
+    <div><span>AUC (Random Forest)</span><span>0.7793</span></div>
+    <div><span>AUC (LASSO)</span><span>0.7699</span></div>
+    <div><span>AUC (Neural Network)</span><span>0.7588</span></div>
+    <div><span>Testfälle</span><span>5'129</span></div>
+  </div>
+</a>
+```
+:::
+
 :::::::: reveal-on-scroll
 ::::::: card-grid
 ```{=html}

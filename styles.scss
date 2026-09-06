@@ -444,3 +444,503 @@ body {
     transition: none;
   }
 }
+
+// ---------- Fallstudie: Datenvisualisierungen ----------
+// Serienfarben als Custom Properties, damit styles.scss die einzige Quelle
+// bleibt — assets/viz-turnout.js liest sie via getComputedStyle aus.
+:root {
+  --series-lasso: #38bdf8;
+  --series-rf: #{$matrix-green};
+  --series-nn: #f59e0b;
+  --series-muted: #6b7683;
+}
+
+// Gerahmtes Panel mit Monospace-Titelzeile
+.viz-frame {
+  background: $anthracite;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.4rem 0;
+}
+
+.viz-frame__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0.9rem;
+  background: $anthracite-2;
+  border-bottom: 1px solid $border-color;
+  font-family: $font-family-monospace;
+  font-size: 0.75rem;
+  color: #6b7683;
+}
+
+.viz-frame__bar .name { color: $matrix-green; }
+.viz-frame__bar .name::before { content: "> "; opacity: 0.5; }
+
+.viz-frame__body {
+  padding: 1rem 0.9rem 0.8rem;
+  overflow-x: auto;
+}
+
+.viz-caption {
+  font-size: 0.86rem;
+  color: #6b7683;
+  padding: 0 0.95rem 0.9rem;
+  max-width: 76ch;
+}
+
+.viz-frame svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ax-grid { stroke: #1b212a; stroke-width: 1; }
+.ax-line { stroke: $border-color; stroke-width: 1; }
+.ax-text { font-family: $font-family-monospace; font-size: 10px; fill: #6b7683; }
+.ax-title { font-family: $font-family-monospace; font-size: 10px; fill: #8b96a3; }
+
+// Erscheint nur, wenn die Grafik breiter ist als das Panel (per JS gesetzt).
+.viz-scroll-hint {
+  font-family: $font-family-monospace;
+  font-size: 0.72rem;
+  color: #6b7683;
+  margin: 0;
+  padding: 0 0.95rem 0.5rem;
+}
+
+.viz-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  font-family: $font-family-monospace;
+  font-size: 0.76rem;
+  padding: 0 0.95rem 0.75rem;
+}
+
+.viz-legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.viz-legend i { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+
+// Zwei Panels nebeneinander
+.viz-duo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 1.2rem;
+  margin: 1.4rem 0;
+}
+
+.viz-duo .viz-frame { margin: 0; }
+
+// ---------- Kennzahlen-Kacheln ----------
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0;
+}
+
+.metric-tile {
+  background: $anthracite;
+  border: 1px solid $border-color;
+  border-top: 2px solid var(--accent, #{$border-color});
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.metric-tile:hover { transform: translateY(-3px); }
+
+.metric-tile h3 {
+  font-family: $font-family-monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 0 0 0.7rem;
+  letter-spacing: 0;
+}
+
+.metric-tile .metric-value {
+  font-family: $font-family-monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  display: block;
+}
+
+.metric-tile .metric-label {
+  font-family: $font-family-monospace;
+  font-size: 0.7rem;
+  color: #6b7683;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.metric-tile.is-best .metric-value { text-shadow: 0 0 18px rgba(0, 255, 65, 0.35); }
+
+.metric-rows {
+  margin-top: 0.9rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid $border-color;
+  display: grid;
+  gap: 0.3rem;
+  font-family: $font-family-monospace;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-rows div { display: flex; justify-content: space-between; gap: 1rem; }
+.metric-rows span:first-child { color: #6b7683; }
+
+.badge-best {
+  font-family: $font-family-monospace;
+  font-size: 0.64rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  background: rgba(0, 255, 65, 0.12);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  color: $matrix-green;
+  margin-left: 0.4rem;
+  vertical-align: 2px;
+}
+
+// Hervorgehobene Aussage
+.pull-quote {
+  font-family: $font-family-monospace;
+  font-size: 1rem;
+  color: $body-color;
+  border-left: 2px solid $matrix-green-dim;
+  padding: 0.35rem 0 0.35rem 1rem;
+  margin: 1.5rem 0;
+  max-width: 66ch;
+}
+
+.pull-quote b { color: $matrix-green; font-weight: 500; }
+
+// ---------- Bedienelemente ----------
+.control-panel {
+  background: $anthracite-2;
+  border-bottom: 1px solid $border-color;
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.control-seg { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.control-seg button {
+  font-family: $font-family-monospace;
+  font-size: 0.76rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid $border-color;
+  background: transparent;
+  color: #6b7683;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.control-seg button:hover { color: $body-color; border-color: #33404e; }
+
+.control-seg button[aria-pressed="true"] {
+  color: var(--sel, #{$matrix-green});
+  border-color: var(--sel, #{$matrix-green});
+  background: rgba(0, 255, 65, 0.08);
+}
+
+.control-seg button:focus-visible,
+.control-row input:focus-visible {
+  outline: 2px solid $matrix-green;
+  outline-offset: 2px;
+}
+
+.control-row { display: grid; gap: 0.3rem; }
+
+.control-row label {
+  font-family: $font-family-monospace;
+  font-size: 0.76rem;
+  color: #6b7683;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.control-row label b {
+  color: $matrix-green;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.control-row input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 22px;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+
+.control-row input[type="range"]::-webkit-slider-runnable-track {
+  height: 3px;
+  background: $border-color;
+  border-radius: 2px;
+}
+
+.control-row input[type="range"]::-moz-range-track {
+  height: 3px;
+  background: $border-color;
+  border-radius: 2px;
+}
+
+.control-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: $matrix-green;
+  border: 2px solid $ink;
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.45);
+}
+
+.control-row input[type="range"]::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: $matrix-green;
+  border: 2px solid $ink;
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.45);
+}
+
+// ---------- Konfusionsmatrix ----------
+.cm-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(200px, 0.75fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+@media (max-width: 620px) {
+  .cm-layout { grid-template-columns: 1fr; }
+}
+
+.cm {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 3px;
+  font-family: $font-family-monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.cm .cm-head {
+  font-size: 0.68rem;
+  color: #6b7683;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.2rem;
+}
+
+.cm .cm-head--row { justify-content: flex-end; padding-right: 0.5rem; text-align: right; }
+
+.cm .cm-cell {
+  border-radius: 4px;
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+  border: 1px solid $border-color;
+  transition: background 0.18s ease;
+}
+
+.cm .cm-cell .cm-n {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  line-height: 1.1;
+}
+
+// Hell genug, um auch auf der am staerksten eingefaerbten Zelle zu tragen.
+.cm .cm-cell .cm-k { font-size: 0.62rem; color: #cfd6de; }
+
+.stat-list { display: grid; gap: 0.55rem; }
+
+.stat {
+  font-family: $font-family-monospace;
+  font-size: 0.76rem;
+}
+
+.stat .stat-top { display: flex; justify-content: space-between; margin-bottom: 0.22rem; }
+.stat .stat-top span:first-child { color: #6b7683; }
+.stat .stat-top b { color: #fff; font-weight: 500; font-variant-numeric: tabular-nums; }
+
+.stat-bar {
+  height: 4px;
+  background: #1b212a;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.stat-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.18s ease;
+}
+
+// ---------- Live-Modell ----------
+.predict {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(220px, 0.8fr);
+  gap: 1.4rem;
+  padding: 1.1rem 0.9rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .predict { grid-template-columns: 1fr; }
+}
+
+.predict .control-panel {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.readout {
+  background: $anthracite-2;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.readout .readout-value {
+  font-family: $font-family-monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 3.1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: $matrix-green;
+  text-shadow: 0 0 22px rgba(0, 255, 65, 0.3);
+}
+
+.readout .readout-caption {
+  font-family: $font-family-monospace;
+  font-size: 0.72rem;
+  color: #6b7683;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.readout .gauge {
+  height: 6px;
+  background: #1b212a;
+  border-radius: 3px;
+  margin-top: 0.9rem;
+  overflow: hidden;
+}
+
+.readout .gauge i {
+  display: block;
+  height: 100%;
+  background: $matrix-green;
+  transition: width 0.2s ease;
+}
+
+// Einordnungs-Hinweis
+.caveat {
+  font-family: $font-family-monospace;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #b6c0cc;
+  border: 1px solid $matrix-green-dim;
+  background: rgba(0, 255, 65, 0.05);
+  border-radius: 6px;
+  padding: 0.75rem 0.9rem;
+  margin: 1.2rem 0;
+  max-width: 72ch;
+}
+
+.caveat b { color: $matrix-green; font-weight: 500; }
+
+// ---------- Ausgezeichnetes Projekt (Projekte-Seite) ----------
+.featured-card {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 260px);
+  gap: 1.6rem;
+  align-items: center;
+  background: $anthracite;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 1.6rem;
+  margin: 1.5rem 0;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.featured-card:hover {
+  border-color: $matrix-green-dim;
+  transform: translateY(-3px);
+  color: inherit;
+}
+
+@media (max-width: 640px) {
+  .featured-card { grid-template-columns: 1fr; }
+}
+
+.featured-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.featured-card .meta {
+  font-family: $font-family-monospace;
+  font-size: 0.78rem;
+  color: $matrix-green;
+  margin-bottom: 0.5rem;
+}
+
+.featured-card p { color: #b6c0cc; margin-bottom: 0; }
+
+.featured-metrics {
+  display: grid;
+  gap: 0.45rem;
+  font-family: $font-family-monospace;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  border-left: 1px solid $border-color;
+  padding-left: 1.4rem;
+}
+
+@media (max-width: 640px) {
+  .featured-metrics {
+    border-left: 0;
+    border-top: 1px solid $border-color;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+}
+
+.featured-metrics div { display: flex; justify-content: space-between; gap: 1rem; }
+.featured-metrics span:first-child { color: #6b7683; }
+.featured-metrics span:last-child { color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .metric-tile,
+  .featured-card,
+  .cm .cm-cell,
+  .stat-bar i,
+  .readout .gauge i,
+  .control-seg button {
+    transition: none;
+  }
+}

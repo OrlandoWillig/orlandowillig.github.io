@@ -1,1 +1,1 @@
-Sitemap: https://orlandowillig.ch/sitemap.xml
+Sitemap: https://orlandowillig.github.io/sitemap.xml
