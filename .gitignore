@@ -14,8 +14,12 @@ CLAUDE.md
 renv/
 renv.lock
 006_Persoenliche_Webseite.Rproj
-.gitignoredocs/_site/
+docs/_site/
 .posit/assistant
 
 # Lokale Claude-Code-Tooling-Dateien
 .claude/
+
+# macOS-Finder-Metadaten
+.DS_Store
+**/.DS_Store
