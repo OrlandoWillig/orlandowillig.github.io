@@ -31,7 +31,7 @@
     { id: "processmining", label: "Process Mining", type: "leaf", desc: "Analyse von Prüfprozessen" },
 
     { id: "efk", label: "EFK", type: "leaf",
-      desc: "Eidgenössische Finanzkontrolle, Bern — Junior Prüfungsexperte & Data Analyst" },
+      desc: "Eidgenössische Finanzkontrolle, Bern — Prüfer (KI & Datenanalysen)" },
     { id: "performanceaudit", label: "Performance-Audit", type: "leaf",
       desc: "Prüfung von Wirksamkeit und Wirtschaftlichkeit" },
     { id: "kigov", label: "KI-Governance", type: "leaf",

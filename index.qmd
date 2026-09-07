@@ -12,7 +12,7 @@ include-after-body:
 
 <section class="hero">
   <div class="hero-name">Orlando Willig</div>
-  <div class="hero-claim">Junior Prüfungsexperte &amp; Data Analyst — Audit trifft KI</div>
+  <div class="hero-claim">Prüfer — Audit trifft KI</div>
   <p class="hero-teaser">
     Ich verbinde Performance-Audit mit Datenanalyse und angewandter KI.
     Bei der Eidgenössischen Finanzkontrolle prüfe ich, wo Technik, Governance und

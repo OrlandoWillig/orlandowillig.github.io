@@ -6,7 +6,7 @@ include-after-body:
 ---
 
 ::: {.about-intro .reveal-on-scroll}
-Ich bin Junior Prüfungsexperte und Data Analyst bei der
+Ich bin Prüfer bei der
 [**Eidgenössischen Finanzkontrolle (EFK)**](https://efk.admin.ch)
 in Bern. Mein Weg dorthin führte über die Politikwissenschaft und mein Interesse für
 Daten — eine Kombination, die mir hilft, technische Systeme und ihre gesellschaftliche
@@ -18,7 +18,7 @@ Wirkung zusammen zu denken.
 ::: reveal-on-scroll
 - **Politikwissenschaft** — Verständnis für Institutionen, öffentliche Aufgaben und Governance
 - **Informatik / Machine Learning** — technische Tiefe in Daten, Modellen und Systemen
-- **Eidgenössische Finanzkontrolle (EFK), Bern** — Junior Prüfungsexperte & Data Analyst
+- **Eidgenössische Finanzkontrolle (EFK), Bern** — Prüfer (KI & Datenanalysen)
 :::
 
 ## [Schwerpunkte]{.decode-on-scroll}
